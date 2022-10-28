@@ -18,4 +18,7 @@ This is where I keep my notes for my studies and sharing with others.
 2. [[Javascript/React Native/expo/expo|expo]]
 
 ### CSE 6603 (Data Management in the Cloud) Notes
-1. Cloud [[Cloud/Multitenancy|Multitenancy]]
+
+1. [[Distributed Computing/Clocks|Clocks]] in Distributed Computing
+2. [[Distributed Computing/Distributed Systems and Computing|Distributed Systems and Computing]]
+3. Cloud [[Cloud/Multitenancy|Multitenancy]]
