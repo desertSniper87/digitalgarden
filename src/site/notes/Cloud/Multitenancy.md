@@ -34,7 +34,7 @@ There are three multi-tenancy models: Database, Schema, and Table.
 - ***Advantage***
     - multi-tenancy can be supported ==without any changes in database layer==.
 
-#### 2. **Schema multi-tenancy** (==Shared Process== / PaaS)
+#### 2. **Schema/Container multi-tenancy** (==Shared Process== / PaaS)
 
 - Application connects to a database once and has _some logic_ to choosing _which schema_ to connect to when serving a particular tenant.
 
@@ -59,9 +59,8 @@ There are three multi-tenancy models: Database, Schema, and Table.
 - In the shared table model, the tenants’ data are stored in a shared table called the **heap table**.
 - To support flexibility in schema and data types across the different tenants, the heap table does not contain the tenant’s schema or column information.
 - ***Disadvantage***
-    - requires that all tenants reside on the same database engine and release
-    - Limits specialized database functionality, such as spatial or object based, and
-    requires that all tenants use a limited subset of functionality.
+    - Requires that all tenants reside on the same **database engine and release**
+    - Limits **specialized database functionality**, such as **spatial** or object based, and requires that all tenants use a **limited subset of functionality**.
 - ***Advantage***
     - This multi-tenancy model is ideal when multiple tenants have **similar schema** and access patterns with minimal customizations, thus providing ==effective sharing of resources==.
     - Such similarity is observed in SaaS where a **generic application tenant** is *customized* to meet specific customer requirements.
