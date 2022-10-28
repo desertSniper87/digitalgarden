@@ -19,6 +19,7 @@ This is where I keep my notes for my studies and sharing with others.
 
 ### CSE 6603 (Data Management in the Cloud) Notes
 
+0. [[Cloud/Cloud Computing|Cloud Computing]]
 1. [[Distributed Computing/Clocks|Clocks]] in Distributed Computing
 2. [[Distributed Computing/Distributed Systems and Computing|Distributed Systems and Computing]]
 3. Cloud [[Cloud/Multitenancy|Multitenancy]]
