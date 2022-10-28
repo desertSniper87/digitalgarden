@@ -7,7 +7,7 @@
 
 Hello I am Samidhya Sarker.
 
-This is where I keep my notes for sharing with others.
+This is where I keep my notes for my studies and sharing with others.
 
 [My homepage/blog](https://www.torsho.me/)
 
