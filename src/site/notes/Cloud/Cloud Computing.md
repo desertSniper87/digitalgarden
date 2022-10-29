@@ -3,6 +3,8 @@
 ---
 
 
+#cse6603 
+
 ## Dynamic Capacity Provisioning
 
 ### Elasticity vs Scalability
@@ -56,24 +58,9 @@ including physical storage files.
     - Nearly optimal in realistic settings.
 
 
-### State of the art
+### State of the art solutions
 
-#### Follow the workload
-
-- [Online Dynamic Capacity Provisioning in Data Centers](http://rsrg.cms.caltech.edu/greenIT/papers/dcp-allerton.pdf)
-    - how many servers to be kept active and how much workload to be delayed for energy saving while meeting every deadline. We present an offline LP formulation for capacity provisioning by dynamic deferral and give two online algorithms to determine the capacity of the data center and the assignment of workload to servers dynamically.
-    - Cited by
-        - [Dynamic Deferral of Workload for Capacity Provisioning in Data Centers - Adnan](https://arxiv.org/pdf/1109.3839.pdf)
-        - [A 2-Competitive Algorithm For Online Convex
-Optimization With Switching Costs](https://drops.dagstuhl.de/opus/volltexte/2015/5297/pdf/7.pdf)
-        - [Cloud Computing Operations Research](https://www.labri.fr/perso/eyraud/pmwiki/uploads/Main/CloudOR.pdf)
-        - [Characterizing the Impact of the Workload on the Value of Dynamic Resizing in Data Centers✩](https://arxiv.org/pdf/1207.6295.pdf)
-
-- Lazy capacity provisioning (LCP)
-    - h dynamically turns on/off servers in a data center to minimize energy cost and delay cost for scheduling workload
-    - aims at minimizing the average delay (penalizing delay)
-    - 3-competitive solution
-    - no bounds on maximum delay.
+1. [[Cloud/Dynamic Capacity Provisioning/Follow the workload|Follow the workload]]
 
 
 #### GreenSlot 
