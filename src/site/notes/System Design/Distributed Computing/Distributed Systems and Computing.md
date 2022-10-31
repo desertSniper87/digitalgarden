@@ -2,9 +2,24 @@
 {"dg-publish":true,"permalink":"/system-design/distributed-computing/distributed-systems-and-computing/"}
 ---
 
+#cse6603 
+
 See,
-- [[System Design/Distributed Computing/Clocks|Clocks]]
+- [[System Design/Distributed Computing/Clocks/Clocks|Clocks]]
 - [[System Design/Distributed Computing/P2P Systems/Peer To Peer Systems|Peer To Peer Systems]]
+
+
+## Distributed System
+
+- Collection of independent computing processes.
+
+
+Two types of systems:
+
+- [[System Design/Distributed Computing/Asynchronous Distributed System|Asynchronous Distributed System]]
+- [[System Design/Distributed Computing/Synchronous Distributed System|Synchronous Distributed System]]
+
+
 
 ## Notes
 
