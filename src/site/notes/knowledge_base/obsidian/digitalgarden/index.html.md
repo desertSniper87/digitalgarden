@@ -29,7 +29,7 @@ This is where I keep my notes for my studies and sharing with others.
 7. [[db/Concurrency Protocols/Pessimistic Concurrency Protocols|Pessimistic Concurrency Protocols]]
 9. [[db/Key Value Stores|Key Value Stores]]
 10. [[db/Data Co-Location|Data Co-Location]]
-11. [[System Design/Distributed Computing/Clocks|Clocks]] in Distributed Computing
+11. [[System Design/Distributed Computing/Clocks/Clocks|Clocks]] in Distributed Computing
 12. [[System Design/Distributed Computing/Distributed Systems and Computing|Distributed Systems and Computing]]
 13. [[System Design/Distributed Computing/P2P Systems/Chords|Chords]]
 14. [[System Design/Distributed Computing/P2P Systems/BitTorrent|BitTorrent]]
