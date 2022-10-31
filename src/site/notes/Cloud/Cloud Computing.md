@@ -79,3 +79,8 @@ Paper: [GreenSlot: Scheduling Energy Consumption in Green Datacenters](https://p
 ### Online Resources
 
 - [DYNAMIC PROVISIONING AND RESOURCE MANAGEMENT FOR MULTI-TIER CLOUD BASED APPLICATIONS](https://sciendo.com/pdf/10.2478/fcds-2013-0008)
+
+
+## Distributed Databases in the cloud
+
+See [[db/Distributed Database/Transactions|Transactions]]
