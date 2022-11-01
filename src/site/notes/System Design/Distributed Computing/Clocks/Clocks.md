@@ -29,16 +29,5 @@ See, [[System Design/Distributed Computing/Distributed Systems and Computing#Kle
 See, [[System Design/Distributed Computing/Clocks/Lamport Clock|Lamport Clock]]
 
 
-See, [Vector Clocks](https://youtu.be/x-D8iFU1d-o?t=670)
-
 
 ### 6603 Lecture Notes
-
-Distributed systems are also classified into synchronous and asynchronous systems.
-
-• In an **asynchronous distributed** system
-- no bounds are known on the times for message
-transmission, processor processing, or on local clock drifts.
-• In a **synchronous system**
-- such bounds are known, and hence timeout can be used to
-detect failures, and when needed, act accordingly.
