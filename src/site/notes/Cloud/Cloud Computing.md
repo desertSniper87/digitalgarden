@@ -13,7 +13,7 @@
 
 - Static property
 - Specifies its behavior on a static configuration.
-- Handled by adding resources to existing instances—called scaling up or vertical scaling
+- Handled by adding resources to existing instances - called scaling up or vertical scaling
 
 ### Elasticity 
 
@@ -40,7 +40,7 @@ architectures:
 abstract replication, fault-tolerance, and consistency, as well as
 their support for independent scaling of the storage layer from
 the DBMS logic.
-– Bigtable, HBase, and ElasTraS are examples.
+– [[db/key value stores/Bigtable|Bigtable]], HBase, and [[ElasTraS|ElasTraS]] are examples.
 • Shared nothing multi-tenant architecture, such as Relational
 
 ###### shared nothing.
@@ -84,3 +84,15 @@ Paper: [GreenSlot: Scheduling Energy Consumption in Green Datacenters](https://p
 ## Distributed Databases in the cloud
 
 See [[db/Distributed Database/Transactions|Transactions]]
+
+## [[Cloud/Multitenancy|Multitenancy]]
+
+– SaaS and PaaS cloud infrastructures typically serve
+hundreds of thousands of small applications (called
+tenants)
+– Dedicating a DBMS server for each tenant is often wasteful
+since the individual tenants’ resource requirements are
+often small.
+– In order to reduce the total cost of operation, cloud
+providers typically share resources among the tenants, a
+model referred to as [[Cloud/Multitenancy|multitenancy]].
