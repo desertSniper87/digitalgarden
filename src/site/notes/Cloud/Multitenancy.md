@@ -6,7 +6,7 @@
 
 ### 1. [What is multitenancy? | Multitenant architecture | Cloudflare](https://www.cloudflare.com/learning/cloud/what-is-multitenancy/)
 
-In [cloud computing](https://www.cloudflare.com/learning/cloud/what-is-the-cloud/), **multitenancy** means that multiple customers of a cloud vendor are using the same computing resources. Despite the fact that they share resources, cloud customers aren't aware of each other, and their *data is kept totally separate*.
+In [cloud computing](https://www.cloudflare.com/learning/cloud/what-is-the-cloud/), **multitenancy** means that *multiple customers* of a cloud vendor are using the **same computing resources**. Despite the fact that they share resources, cloud customers aren't aware of each other, and their *data is kept totally separate*.
 
 ### 2. [IaaS vs. PaaS vs. SaaS | Redhat](https://www.redhat.com/en/topics/cloud-computing/iaas-vs-paas-vs-saas)
 
@@ -28,8 +28,7 @@ There are three multi-tenancy models: Database, Schema, and Table.
 - Predominantly used in Infrastructure-as-a-Service (***IaaS***) cloud providers such as Amazon web services (ec2)
 - ***Disadvantage***
     - Increased overhead due to **redundant components**
-    - **lack of coordination** using **limited machine resources** in a non-optimal
-    way.
+    - **lack of coordination** using **limited machine resources** in a non-optimal way.
     - The co-located database processes make un-coordinated accesses to the disk.
 - ***Advantage***
     - multi-tenancy can be supported ==without any changes in database layer==.
