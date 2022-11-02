@@ -40,6 +40,9 @@ Two types of systems:
 ## [[System Design/Distributed Computing/Paxos|Paxos]]
 
 ---
-See also, [[System Design/Distributed Computing/Books/bytebytego|bytebytego]]
+See also,
+
+1. [[System Design/Distributed Computing/Books/bytebytego|bytebytego]]
+2. [Distributed Systems Reading Group](http://dsrg.pdos.csail.mit.edu/)
 
 
