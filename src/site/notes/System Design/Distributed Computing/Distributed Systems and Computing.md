@@ -35,9 +35,14 @@ Two types of systems:
 
 ### [[System Design/Distributed Computing/Bully Algorithm|Bully Algorithm]]
 
-## [[System Design/Distributed Computing/Quorums|Quorums]]
+### [[System Design/Distributed Computing/Quorums|Quorums]]
 
-## [[System Design/Distributed Computing/Paxos|Paxos]]
+### [[System Design/Distributed Computing/Paxos|Paxos]]
+
+## Message Passing
+
+1. [[net/Broadcast|Broadcast]]
+2. [[net/Multicast|Multicast]]
 
 ---
 See also,
