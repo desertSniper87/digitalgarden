@@ -2,6 +2,9 @@
 {"dg-publish":true,"permalink":"/db/distributed-database/sql/cockroach-db/cockroach-db-fault-tolerance-and-disaster-recovery/"}
 ---
 
+
+## Fault Tolerance
+
 When a node fails, the cluster waits for the node to remain offline for 5 minutes by default before considering it dead, at which point the cluster automatically repairs itself by re-replicating any of the replicas on the down nodes to other available nodes.
 
 ## Reference
