@@ -3,8 +3,6 @@
 ---
 
 
-# CockroachDB
-
 1. A [[db/database|database]] that automatically scales, rebalances, and repairs itself.
 
 ## Links
@@ -19,7 +17,8 @@
 1. [r/CockroachDB](https://www.reddit.com/r/CockroachDB/)
 2. [Newest 'cockroachdb' Questions - Database Administrators Stack Exchange](https://dba.stackexchange.com/questions/tagged/cockroachdb)
 3. [Newest 'cockroachdb' Questions - Stack Overflow](https://stackoverflow.com/questions/tagged/cockroachdb)
-4. [Slack](https://app.slack.com/client/TP86H0JSH/CR3SMSYFR)
+4. [Join the CockroachDB Slack community | Cockroach Labs](https://www.cockroachlabs.com/join-community/?&utm_source=reddit&utm_medium=social)
+	1. [Slack](https://app.slack.com/client/TP86H0JSH)
 5. [Discussions · cockroachdb/cockroach · GitHub](https://github.com/cockroachdb/cockroach/discussions)
 6. [Issues · cockroachdb/cockroach · GitHub](https://github.com/cockroachdb/cockroach/issues)
 
