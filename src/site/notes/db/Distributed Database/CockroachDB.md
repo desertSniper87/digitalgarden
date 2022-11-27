@@ -3,6 +3,8 @@
 ---
 
 
+# CockroachDB
+
 1. A [[db/database|database]] that automatically scales, rebalances, and repairs itself.
 
 ## Links
