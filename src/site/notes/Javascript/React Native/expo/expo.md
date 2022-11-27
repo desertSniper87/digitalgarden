@@ -5,7 +5,7 @@
 
 ## Contents
 
-1. [[Javascript/React Native/expo/Internal distribution (iOS)|Internal distribution (iOS)]]
+1. [[Javascript/React Native/expo/Internal Ad-hoc distribution (iOS)|Internal Ad-hoc distribution (iOS)]]
 
 ## Guides
 
