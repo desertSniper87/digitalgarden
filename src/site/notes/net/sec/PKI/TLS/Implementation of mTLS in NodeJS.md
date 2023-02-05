@@ -5,11 +5,27 @@
 
 ## References
 
-2. [[net/sec/PKI/TLS/TLS Client Authentication|TLS Client Authentication]]
-3. [[nodejs|nodejs]]
+2. [[net/sec/PKI/TLS/TLS Client Authentication\|TLS Client Authentication]]
+3. [[nodejs\|nodejs]]
+4. [[sre/Tools/openssl\|openssl]]
 
 
-## Step 1 - Generate certifcate autority using [[sre/Tools/openssl|openssl]]
+## Step 1 - Generate certifcate autority using [[sre/Tools/openssl\|openssl]]
+
+### Ext File (v3.ext)
+
+```yaml
+
+authorityKeyIdentifier=keyid,issuer
+basicConstraints=CA:FALSE
+keyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment
+subjectAltName = @alt_names
+
+[alt_names]
+DNS.1 = bcc-ca-website.org
+
+
+```
 
 
 ### Generate CA certificate
@@ -28,6 +44,19 @@ openssl req \
   -out ca.crt
 ```
 
+#### Generate CA certificate for client
+
+```bash
+openssl req \
+  -new \
+  -x509 \
+  -nodes \
+  -newkey rsa:2048\
+  -days 365 \
+  -subj '/CN=bcc-client' \
+  -keyout ca-client.key \
+  -out ca-client.crt
+```
 
 ### Generate Server Certificate
 
@@ -46,7 +75,7 @@ Here common name is localhost
 openssl req \
   -new \
   -key server.key \
-  -subj '/CN=localhost' \
+  -subj '/CN=bcc-ca-website.org' \
   -out server.csr
 ```
 
@@ -60,6 +89,7 @@ openssl x509 \
   -CAkey ca.key \
   -CAcreateserial \
   -days 365 \
+  -extfile v3.ext \
   -out server.crt
 ```
 
@@ -91,14 +121,16 @@ openssl req \
 openssl x509 \
   -req \
   -in client.csr \
-  -CA ca.crt \
-  -CAkey ca.key \
+  -CA ca-client.crt \
+  -CAkey ca-client.key \
   -CAcreateserial \
   -days 365 \
   -out client.crt
 ```
 
-Then we can convert [[net/sec/PKI/TLS/p12|crt to p12]]
+Then, 
+1. we can convert [[net/sec/PKI/TLS/p12\|crt to p12]]
+2. import ca/client certificate into keystore using [[Keystore#Add certificate into keystore \| keystore]]
 
 ## Testing the server
 
