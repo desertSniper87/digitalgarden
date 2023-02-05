@@ -40,7 +40,7 @@ architectures:
 abstract replication, fault-tolerance, and consistency, as well as
 their support for independent scaling of the storage layer from
 the DBMS logic.
-– [[db/key value stores/Bigtable|Bigtable]], HBase, and [[ElasTraS|ElasTraS]] are examples.
+– [[db/key value stores/Bigtable\|Bigtable]], HBase, and [[ElasTraS\|ElasTraS]] are examples.
 • Shared nothing multi-tenant architecture, such as Relational
 
 ###### shared nothing.
@@ -60,7 +60,7 @@ including physical storage files.
 
 ### State of the art solutions
 
-1. [[Cloud/Dynamic Capacity Provisioning/Follow the workload|Follow the workload]]
+1. [[Cloud/Dynamic Capacity Provisioning/Follow the workload\|Follow the workload]]
 
 
 #### GreenSlot 
@@ -83,9 +83,9 @@ Paper: [GreenSlot: Scheduling Energy Consumption in Green Datacenters](https://p
 
 ## Distributed Databases in the cloud
 
-See [[db/Distributed Database/Transactions|Transactions]]
+See [[db/Distributed Database/Transactions\|Transactions]]
 
-## [[Cloud/Multitenancy|Multitenancy]]
+## [[Cloud/Multitenancy\|Multitenancy]]
 
 – SaaS and PaaS cloud infrastructures typically serve
 hundreds of thousands of small applications (called
@@ -95,4 +95,4 @@ since the individual tenants’ resource requirements are
 often small.
 – In order to reduce the total cost of operation, cloud
 providers typically share resources among the tenants, a
-model referred to as [[Cloud/Multitenancy|multitenancy]].
+model referred to as [[Cloud/Multitenancy\|multitenancy]].
