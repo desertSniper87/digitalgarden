@@ -18,7 +18,7 @@
 
 #### [Martin Kleppmann](https://www.youtube.com/watch?v=x-D8iFU1d-o)
 
-See, [[System Design/Distributed Computing/Distributed Systems and Computing#Kleppman|Distributed Systems and Computing#Kleppman]]
+See, [[System Design/Distributed Computing/Distributed Systems and Computing#Kleppman\|Distributed Systems and Computing#Kleppman]]
 
 > Distributed Systems 4.1: Logical time
 
@@ -26,7 +26,7 @@ See, [[System Design/Distributed Computing/Distributed Systems and Computing#Kle
  > Physical Timestamps: Inconsistent with causality
  > Logical Clocks: **Capture causal dependencies**
  
-See, [[System Design/Distributed Computing/Clocks/Lamport Clock|Lamport Clock]]
+See, [[System Design/Distributed Computing/Clocks/Lamport Clock\|Lamport Clock]]
 
 
 
