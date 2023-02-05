@@ -5,7 +5,7 @@
 
 [**Two-phase locking - Wikipedia**](https://en.wikipedia.org/wiki/Two-phase_locking) 
 
-In [databases](https://en.wikipedia.org/wiki/Database "Database") and [transaction processing](https://en.wikipedia.org/wiki/Transaction_processing "Transaction processing"), **two-phase locking** (**2PL**) is a [concurrency control](https://en.wikipedia.org/wiki/Concurrency_control "Concurrency control") method that guarantees [[db/serializability|serializability]]
+In [databases](https://en.wikipedia.org/wiki/Database "Database") and [transaction processing](https://en.wikipedia.org/wiki/Transaction_processing "Transaction processing"), **two-phase locking** (**2PL**) is a [concurrency control](https://en.wikipedia.org/wiki/Concurrency_control "Concurrency control") method that guarantees [[db/serializability\|serializability]]
 
 
 ![](https://www.researchgate.net/profile/Muhammad-Haroon-56/publication/340476882/figure/fig2/AS:877567884156929@1586239896391/Two-phase-locking-protocol-2PL.jpg)
