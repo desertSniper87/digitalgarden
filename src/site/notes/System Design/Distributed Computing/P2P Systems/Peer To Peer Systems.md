@@ -29,7 +29,7 @@ No specific structure on logical graph between the peers.
 
 - Impose a well-defined data structure on the various peers.
 
-See, [[System Design/Distributed Computing/P2P Systems/Distributed Hash Tables (DHTs)|Distributed Hash Tables (DHTs)]]
+See, [[System Design/Distributed Computing/P2P Systems/Distributed Hash Tables (DHTs)\|Distributed Hash Tables (DHTs)]]
 
-See, [[System Design/Distributed Computing/Consistent Hashing|Consistent Hashing]]
+See, [[System Design/Distributed Computing/Consistent Hashing\|Consistent Hashing]]
 
