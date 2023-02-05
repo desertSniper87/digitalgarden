@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/knowledge-base/obsidian/digitalgarden/digitalgarden-home/","tags":"gardenEntry"}
+{"dg-publish":true,"permalink":"/knowledge-base/obsidian/digitalgarden/digitalgarden-home/","tags":["gardenEntry"]}
 ---
 
 
