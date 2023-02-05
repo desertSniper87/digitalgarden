@@ -21,7 +21,7 @@ In a peer-to-peer network, data is stored in different computers. A user needs t
 
 ### Solution
 
-- Nodes (each computer in the network) and keys are assigned an **m-bit** identifier using [[System Design/Distributed Computing/Consistent Hashing|Consistent Hashing]].
+- Nodes (each computer in the network) and keys are assigned an **m-bit** identifier using [[System Design/Distributed Computing/Consistent Hashing\|Consistent Hashing]].
 	- There are $2^m$ Ids available
 	- if m=8, total possible ids =  $2^8$ = 256
 - The SHA-1 algorithm is the base hashing function for consistent hashing
