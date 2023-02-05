@@ -6,7 +6,7 @@
 
 #cse6603
 
-- Variation on [[Cloud/Dynamic Capacity Provisioning/Follow the workload|Follow the workload]]
+- Variation on [[Cloud/Dynamic Capacity Provisioning/Follow the workload\|Follow the workload]]
 
 [Dynamic Deferral of Workload for Capacity Provisioning in Data Centers - Adnan](https://arxiv.org/pdf/1109.3839.pdf)
 The energy cost function
