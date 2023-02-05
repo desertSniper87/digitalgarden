@@ -5,7 +5,7 @@
 #cse6603 
 
 [https://www.cs.princeton.edu/courses/archive/fall19/cos418/docs/L8-dhts.pdf](https://www.cs.princeton.edu/courses/archive/fall19/cos418/docs/L8-dhts.pdf)
-- Hash table using [[System Design/Distributed Computing/Consistent Hashing|Consistent Hashing]]
+- Hash table using [[System Design/Distributed Computing/Consistent Hashing\|Consistent Hashing]]
 - No central index server. 
 - Maps objects(files) to sites, 
 - Key value lookup.
@@ -18,4 +18,4 @@
 - 
 
 
-#### See, [[System Design/Distributed Computing/P2P Systems/Chords|Chords]] and [[System Design/Distributed Computing/P2P Systems/BitTorrent|BitTorrent]]
+#### See, [[System Design/Distributed Computing/P2P Systems/Chords\|Chords]] and [[System Design/Distributed Computing/P2P Systems/BitTorrent\|BitTorrent]]
