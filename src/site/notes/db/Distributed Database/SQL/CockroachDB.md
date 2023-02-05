@@ -3,12 +3,14 @@
 ---
 
 
-1. A [[db/database|database]] that automatically scales, rebalances, and repairs itself.
+1. A [[db/database\|database]] that automatically scales, rebalances, and repairs itself.
 
 ## Links
-1. [[db/Distributed Database/SQL/CockroachDB/CockroachDB production Deployment|CockroachDB production Deployment]]
-2. [[db/Distributed Database/SQL/CockroachDB/CockroachDB fault Tolerance and Disaster Recovery|CockroachDB fault Tolerance and Disaster Recovery]]
-3. [[db/Distributed Database/SQL/CockroachDB/CockroachDB Backup and Restore|CockroachDB Backup and Restore]]
+1. [[db/Distributed Database/SQL/CockroachDB/CockroachDB production Deployment\|CockroachDB production Deployment]]
+2. [[Using Cockroach for development\|Using Cockroach for development]]
+3. [[db/Distributed Database/SQL/CockroachDB/CockroachDB fault Tolerance and Disaster Recovery\|CockroachDB fault Tolerance and Disaster Recovery]]
+4. [[db/Distributed Database/SQL/CockroachDB/CockroachDB Backup and Restore\|CockroachDB Backup and Restore]]
+5. [[CockroachDB Certificate management\|CockroachDB Certificate management]]
 
 ## Sample workload (for testing)
 
