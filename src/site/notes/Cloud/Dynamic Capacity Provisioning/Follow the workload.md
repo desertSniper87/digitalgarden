@@ -27,4 +27,4 @@ Optimization With Switching Costs](https://drops.dagstuhl.de/opus/volltexte/2015
     - 3-competitive solution
     - No bounds on maximum delay.
 
-##### Variation [[Cloud/Dynamic Capacity Provisioning/Valley Filling Workload|Valley Filling Workload]]
+##### Variation [[Cloud/Dynamic Capacity Provisioning/Valley Filling Workload\|Valley Filling Workload]]
