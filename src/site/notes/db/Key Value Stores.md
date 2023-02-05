@@ -7,7 +7,7 @@
 - Low cost scalable DBMSs
     - Google’s Bigtable 
     - Yahoo!’s PNUTS 
-    - Amazon’s [[db/key value stores/Dynamo|Dynamo]] 
+    - Amazon’s [[db/key value stores/Dynamo\|Dynamo]] 
 - Supports
     - Simple key-value-based data model
     - ==Single atomic key-value access guarantees.==
@@ -20,7 +20,7 @@
     - *Relational Data Model*: the value is structured into multiple columns, each with its own attribute name. 
 	    - *@question: Is null value permitted?*
     - *Column Family Data Model*: the columns in the value field are grouped together into column families, each consisting of a set of columns.
-        - Example: Bigtable, [[db/key value stores/Cassandra|Cassandra]], HBase
+        - Example: Bigtable, [[db/key value stores/Cassandra\|Cassandra]], HBase
 
 ## Data Distribution
 
@@ -33,11 +33,11 @@ For flexible scaling out to multiple servers
         - Hashes the records **based on the key** to **linear address space**, which is then divided among the different servers.
         - A typical hashing approach can use a distributed hash table (DHT) such as Chord.
 
-## [[Fault Tolerance|Fault Tolerance]]
+## [[Fault Tolerance\|Fault Tolerance]]
 
-## [[db/Distributed Database/Transactions|Transactions]]
-## [[db/Distributed Database/Incremental Update Processing|Incremental Update Processing]] 
-## [[db/Distributed Database/Data Co-Location|Data Co-Location]]
+## [[db/Distributed Database/Transactions\|Transactions]]
+## [[db/Distributed Database/Incremental Update Processing\|Incremental Update Processing]] 
+## [[db/Distributed Database/Data Co-Location\|Data Co-Location]]
 
 
 
