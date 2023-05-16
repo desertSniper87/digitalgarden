@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/net/total-order-multicast/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/net/total-order-multicast/"}
 ---
 
 #cse6603 
