@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/system-design/distributed-computing/p2-p-systems/bit-torrent/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/system-design/distributed-computing/p2-p-systems/bit-torrent/"}
 ---
 
 #cse6603 
