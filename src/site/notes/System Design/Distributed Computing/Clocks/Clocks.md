@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/system-design/distributed-computing/clocks/clocks/"}
+{"dg-publish":true,"permalink":"/system-design/distributed-computing/clocks/clocks/","dgPassFrontmatter":true}
 ---
 
 #cse6603 
