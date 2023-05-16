@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/db/distributed-database/sql/cockroach-db/cockroach-db-backup-and-restore/"}
+{"dg-publish":true,"permalink":"/db/distributed-database/sql/cockroach-db/cockroach-db-backup-and-restore/","dgPassFrontmatter":true}
 ---
 
 ## Links
