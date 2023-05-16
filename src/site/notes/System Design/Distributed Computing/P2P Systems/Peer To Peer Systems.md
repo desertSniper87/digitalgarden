@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/system-design/distributed-computing/p2-p-systems/peer-to-peer-systems/"}
+{"dg-publish":true,"permalink":"/system-design/distributed-computing/p2-p-systems/peer-to-peer-systems/","dgPassFrontmatter":true}
 ---
 
 #cse6603 
