@@ -11,6 +11,8 @@
 3. [[db/Distributed Database/SQL/CockroachDB/CockroachDB fault Tolerance and Disaster Recovery\|CockroachDB fault Tolerance and Disaster Recovery]]
 4. [[db/Distributed Database/SQL/CockroachDB/CockroachDB Backup and Restore\|CockroachDB Backup and Restore]]
 5. [[CockroachDB Certificate management\|CockroachDB Certificate management]]
+6. [[db/Distributed Database/SQL/CockroachDB/CockroachDB Logs\|CockroachDB Logs]]
+7. [[Load Balancing CockroachDB using Haproxy\|Load Balancing CockroachDB using Haproxy]]
 
 ## Sample workload (for testing)
 
@@ -19,6 +21,12 @@
 ```bash
 cockroach workload init ycsb --splits=50 'postgresql://root@localhost:26000?sslmode=disable'
 ```
+
+
+
+## Node Shutdown
+
+[Node Shutdown | CockroachDB Docs](https://www.cockroachlabs.com/docs/stable/node-shutdown.html)
 
 ## Support
 
@@ -45,6 +53,7 @@ cockroach workload init ycsb --splits=50 'postgresql://root@localhost:26000?sslm
 7. [How We Built a Vectorized Execution Engine](https://www.cockroachlabs.com/blog/how-we-built-a-vectorized-execution-engine/)
 8. [Exploring Column Families in CockroachDB - DEV Community 👩‍💻👨‍💻](https://dev.to/jordanlewis/exploring-column-families-in-cockroachdb-kje)
 9. [The One Crucial Difference Between Spanner and CockroachDB](https://authzed.com/blog/prevent-newenemy-cockroachdb/)
+10. [CockroachDB Instance Startup and Logging | uptimeDBA](https://uptimedba.github.io/cockroach-vb-single/cockroach-vb-single/cockroach-vb-single_db_startup_and_logging.html)
 
 ### Videos
 
