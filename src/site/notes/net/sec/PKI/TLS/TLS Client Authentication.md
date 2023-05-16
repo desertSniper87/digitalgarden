@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/net/sec/pki/tls/tls-client-authentication/"}
+{"alias":["mutual TLS","mTLS"],"dg-publish":true,"permalink":"/net/sec/pki/tls/tls-client-authentication/","dgPassFrontmatter":true}
 ---
 
 
