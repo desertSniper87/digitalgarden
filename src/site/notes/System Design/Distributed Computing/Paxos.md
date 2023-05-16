@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/system-design/distributed-computing/paxos/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/system-design/distributed-computing/paxos/"}
 ---
 
 
