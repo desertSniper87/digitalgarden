@@ -9,6 +9,12 @@
 2. [[expo-notifications\|expo-notifications]]
 3. [[Javascript/React Native/expo/Expo Builds for production\|Expo Builds for production]]
 4. [[expo-errors\|expo-errors]]
+5. [[expo-build\|expo-build]]
+6. [[Javascript/React Native/expo/expo-run\|expo-run]]
+
+### See also
+
+1. [[react-native cli\|react-native cli]]
 
 ## Guides
 
