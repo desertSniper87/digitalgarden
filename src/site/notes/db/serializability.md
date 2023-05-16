@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/db/serializability/"}
+{"dg-publish":true,"permalink":"/db/serializability/","dgPassFrontmatter":true}
 ---
 
 - Given a set of transactions, we are guaranteed correctness if they
