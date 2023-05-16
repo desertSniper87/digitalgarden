@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/system-design/distributed-computing/bully-algorithm/"}
+{"dg-publish":true,"permalink":"/system-design/distributed-computing/bully-algorithm/","dgPassFrontmatter":true}
 ---
 
 #cse6603 
