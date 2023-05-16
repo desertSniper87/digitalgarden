@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/system-design/distributed-computing/clocks/lamport-clock/"}
+{"dg-publish":true,"permalink":"/system-design/distributed-computing/clocks/lamport-clock/","dgPassFrontmatter":true}
 ---
 
 
