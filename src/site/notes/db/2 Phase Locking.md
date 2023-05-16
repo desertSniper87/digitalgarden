@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/db/2-phase-locking/"}
+{"dg-publish":true,"permalink":"/db/2-phase-locking/","dgPassFrontmatter":true}
 ---
 
 
