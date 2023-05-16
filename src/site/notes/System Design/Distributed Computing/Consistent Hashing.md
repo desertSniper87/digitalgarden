@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/system-design/distributed-computing/consistent-hashing/"}
+{"dg-publish":true,"permalink":"/system-design/distributed-computing/consistent-hashing/","dgPassFrontmatter":true}
 ---
 
 ## Videos
