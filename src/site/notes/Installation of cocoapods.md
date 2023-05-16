@@ -3,6 +3,13 @@
 ---
 
 
+## Prerequisites
+
+1. Xcode developement tools
+2. Ruby >=2.7.0
+3. [[Homebrew\|Homebrew]]
+
+
 ```bash
 sudo gem install cocoapods
 ```
