@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/cloud/cloud-computing/"}
+{"dg-publish":true,"permalink":"/cloud/cloud-computing/","dgPassFrontmatter":true}
 ---
 
 
