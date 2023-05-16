@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/apple/tools/homebrew/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/apple/tools/homebrew/"}
 ---
 
 ## Installation
