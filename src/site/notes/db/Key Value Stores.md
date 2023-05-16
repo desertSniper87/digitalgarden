@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/db/key-value-stores/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/db/key-value-stores/"}
 ---
 
 #cse6603 
