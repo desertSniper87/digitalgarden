@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/nginx/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/nginx/"}
 ---
 
 
