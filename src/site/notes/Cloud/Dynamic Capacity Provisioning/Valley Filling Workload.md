@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/cloud/dynamic-capacity-provisioning/valley-filling-workload/"}
+{"dg-publish":true,"permalink":"/cloud/dynamic-capacity-provisioning/valley-filling-workload/","dgPassFrontmatter":true}
 ---
 
 
