@@ -34,8 +34,6 @@ haproxy-poc  \
 ```
 
 
-
-
 Creating the certificate and key for the Second node:
 
 ```bash
@@ -52,24 +50,45 @@ haproxy-poc  \
 ```
 
 
-## Load Balancer ([[sre/server_deployment/Haproxy\|Haproxy]]) Config
+### Starting the nodes
 
-```cfg
-listen psql
-    bind :26257
-    mode tcp
-    balance roundrobin
-    option httpchk GET /health?ready=1
-    server cockroach1 <node1 address>:26257 check port 8080
-    server cockroach2 <node2 address>:26257 check port 8080
+1. SSH into node. 
+2. Start cockroach
 
+```bash
+cockroach start \
+--certs-dir=/data/certs \
+--advertise-addr=172.16.221.243 \
+--join=172.16.221.230 \
+--cache=.25 \
+--max-sql-memory=.25 \
+--background
 ```
 
+
+```bash
+cockroach start \
+--certs-dir=/data/certs \
+--advertise-addr=172.16.221.230 \
+--join=172.16.221.243 \
+--cache=.25 \
+--max-sql-memory=.25 \
+--background
+```
+
+
+## Load Balancer ([[sre/server_deployment/Haproxy\|Haproxy]]) Config
+
+Refer => [[Load Balancing CockroachDB using Haproxy\|Load Balancing CockroachDB using Haproxy]]
 
 ## Reference
 
 1. [Production Checklist | CockroachDB Docs](https://www.cockroachlabs.com/docs/stable/recommended-production-settings.html)
 2. [Deploy CockroachDB On-Premises | CockroachDB Docs](https://www.cockroachlabs.com/docs/v22.1/deploy-cockroachdb-on-premises)
+	- Generation of CA Certificates
 3. [Linux Installation](https://www.cockroachlabs.com/docs/v22.1/install-cockroachdb-linux.html)
 4. [Deploy CockroachDB On-Premises | CockroachDB Docs](https://www.cockroachlabs.com/docs/stable/deploy-cockroachdb-on-premises.html)
+	- [[sre/server_deployment/Haproxy\|Haproxy]] configuration
 5. [How To Deploy CockroachDB on a Three-Node Cluster on Ubuntu 16.04 | DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-deploy-cockroachdb-on-a-three-node-cluster-on-ubuntu-16-04)
+### Logs
+
