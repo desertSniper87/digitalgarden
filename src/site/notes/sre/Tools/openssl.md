@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"alias":["key to pem","pfx to p7b"],"permalink":"/sre/tools/openssl/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/sre/tools/openssl/"}
 ---
 
 
