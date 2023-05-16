@@ -1,5 +1,5 @@
 ---
-{"alias":["cockroach-db"],"dg-publish":true,"permalink":"/db/distributed-database/sql/cockroach-db/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/db/distributed-database/sql/cockroach-db/"}
 ---
 
 
