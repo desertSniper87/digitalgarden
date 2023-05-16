@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/system-design/distributed-computing/p2-p-systems/distributed-hash-tables-dh-ts/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/system-design/distributed-computing/p2-p-systems/distributed-hash-tables-dh-ts/"}
 ---
 
 #cse6603 
