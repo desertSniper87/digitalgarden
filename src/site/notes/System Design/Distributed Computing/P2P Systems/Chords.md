@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/system-design/distributed-computing/p2-p-systems/chords/"}
+{"dg-publish":true,"permalink":"/system-design/distributed-computing/p2-p-systems/chords/","dgPassFrontmatter":true}
 ---
 
 
