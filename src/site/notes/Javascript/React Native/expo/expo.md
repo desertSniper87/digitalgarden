@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"alias":["expo-cli","expo ios images"],"permalink":"/javascript/react-native/expo/expo/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/javascript/react-native/expo/expo/"}
 ---
 
 
