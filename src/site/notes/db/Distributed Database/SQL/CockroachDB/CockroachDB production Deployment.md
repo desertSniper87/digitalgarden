@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/db/distributed-database/sql/cockroach-db/cockroach-db-production-deployment/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/db/distributed-database/sql/cockroach-db/cockroach-db-production-deployment/"}
 ---
 
 
