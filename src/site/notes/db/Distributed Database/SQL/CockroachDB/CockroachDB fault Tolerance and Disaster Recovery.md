@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/db/distributed-database/sql/cockroach-db/cockroach-db-fault-tolerance-and-disaster-recovery/"}
+{"dg-publish":true,"permalink":"/db/distributed-database/sql/cockroach-db/cockroach-db-fault-tolerance-and-disaster-recovery/","dgPassFrontmatter":true}
 ---
 
 
