@@ -5,6 +5,9 @@
 
 ## Links
 
+1. [[OpenSSL - Calculating Digest Value\|OpenSSL - Calculating Digest Value]]
+2. [[OpenSSL - Generating PSK\|OpenSSL - Generating PSK]]
+
 
 ## Flags
 
@@ -26,6 +29,14 @@ openssl x509 \
   --in server.crt \
   -text \
   --noout
+```
+
+
+### View p7b chain
+
+
+```bash
+openssl pkcs7 -in yourfile.p7b -print_certs -noout
 ```
 
 ### [[net/sec/PKI/PEM\|PEM]] file 
@@ -57,3 +68,28 @@ openssl s_client -connect localhost:8081
 ### Generating Fullchain certificate 
 
 [OpenSSL create certificate chain with Root & Intermediate CA | GoLinuxCloud](https://www.golinuxcloud.com/openssl-create-certificate-chain-linux/)
+
+
+## Private key to pem
+
+
+```bash
+openssl rsa -in server.key -text > privatekey.pem
+```
+
+
+## P12/PFX to P7B
+
+```bash
+openssl pkcs12 -in yourfile.pfx -out yourfile.pem -nodes
+```
+
+```bash
+openssl crl2pkcs7 -nocrl -certfile yourfile.pem -out yourfile.p7b
+```
+
+
+## Installation in [[forums/ios\|ios]]
+
+- [ios - Installing OpenSSL library for Xcode - Stack Overflow](https://stackoverflow.com/questions/22692564/installing-openssl-library-for-xcode)
+- [Easy inclusion of OpenSSL into iOS projects](https://atastypixel.com/easy-inclusion-of-openssl-into-iphone-app-projects/)
