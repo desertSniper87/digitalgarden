@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"alias":["Distributed Computing"],"permalink":"/system-design/distributed-computing/distributed-systems-and-computing/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/system-design/distributed-computing/distributed-systems-and-computing/"}
 ---
 
 #cse6603 
