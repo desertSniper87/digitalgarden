@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/cloud/multitenancy/"}
+{"dg-publish":true,"permalink":"/cloud/multitenancy/","dgPassFrontmatter":true}
 ---
 
 ## Guides
