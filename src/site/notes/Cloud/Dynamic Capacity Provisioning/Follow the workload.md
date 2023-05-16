@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/cloud/dynamic-capacity-provisioning/follow-the-workload/"}
+{"dg-publish":true,"permalink":"/cloud/dynamic-capacity-provisioning/follow-the-workload/","dgPassFrontmatter":true}
 ---
 
 
