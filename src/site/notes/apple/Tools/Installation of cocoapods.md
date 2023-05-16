@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/apple/tools/installation-of-cocoapods/","dgPassFrontmatter":true}
+{"dg-publish":true,"permalink":"/apple/tools/installation-of-cocoapods/"}
 ---
 
 
