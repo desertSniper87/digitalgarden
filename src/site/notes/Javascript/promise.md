@@ -1,7 +1,6 @@
 ---
-{"dg-publish":true,"permalink":"/javascript/promise/"}
+dg-publish: true
 ---
-
 
 
 ## Docs
