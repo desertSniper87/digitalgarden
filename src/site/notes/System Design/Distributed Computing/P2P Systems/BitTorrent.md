@@ -1,7 +1,6 @@
 ---
-{"dg-publish":true,"permalink":"/system-design/distributed-computing/p2-p-systems/bit-torrent/"}
+dg-publish: true
 ---
-
 #cse6603 
 
 - [BitTorrent - Wikipedia](https://en.wikipedia.org/wiki/BitTorrent)
