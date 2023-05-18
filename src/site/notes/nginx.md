@@ -1,7 +1,6 @@
 ---
-{"dg-publish":true,"permalink":"/nginx/"}
+dg-publish: true
 ---
-
 
 ## Links
 
