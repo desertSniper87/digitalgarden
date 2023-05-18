@@ -1,6 +1,7 @@
 ---
-dg-publish: true
+{"dg-publish":true,"permalink":"/system-design/distributed-computing/p2-p-systems/distributed-hash-tables-dh-ts/"}
 ---
+
 #cse6603 
 
 [https://www.cs.princeton.edu/courses/archive/fall19/cos418/docs/L8-dhts.pdf](https://www.cs.princeton.edu/courses/archive/fall19/cos418/docs/L8-dhts.pdf)
