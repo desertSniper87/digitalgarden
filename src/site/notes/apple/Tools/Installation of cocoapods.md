@@ -26,13 +26,11 @@ xcode-select --install
 
 ```bash
 brew install rbenv ruby-build
-# echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_profile 
-echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.zsh_profile
+echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_profile 
 rbenv install 2.6.3
 rbenv global 2.6.3
 ```
 
-### Installation of Ruby 3.1.0
 
 #### References
 
