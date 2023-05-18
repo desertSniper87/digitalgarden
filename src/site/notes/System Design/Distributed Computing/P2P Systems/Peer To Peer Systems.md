@@ -1,7 +1,6 @@
 ---
-{"dg-publish":true,"permalink":"/system-design/distributed-computing/p2-p-systems/peer-to-peer-systems/"}
+dg-publish: true
 ---
-
 #cse6603 
 
 - An overlay organizes: 
