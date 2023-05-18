@@ -1,6 +1,7 @@
 ---
-dg-publish: true
+{"dg-publish":true,"permalink":"/db/2-phase-locking/"}
 ---
+
 
 [**Two-phase locking - Wikipedia**](https://en.wikipedia.org/wiki/Two-phase_locking) 
 
