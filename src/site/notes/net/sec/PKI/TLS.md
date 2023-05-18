@@ -1,7 +1,7 @@
 ---
-{"dg-publish":true,"permalink":"/net/sec/pki/tls/"}
+alias: [SSL]
+dg-publish: true
 ---
-
 
 - Transport Layer Security 
 - [Wikipedia](https://en.wikipedia.org/wiki/Transport_Layer_Security)
