@@ -1,7 +1,6 @@
 ---
-{"dg-publish":true,"permalink":"/apple/tools/homebrew/"}
+dg-publish: true
 ---
-
 ## Installation
 
 1. [How to install homebrew on M1 mac - Stack Overflow](https://stackoverflow.com/questions/66666134/how-to-install-homebrew-on-m1-mac)
