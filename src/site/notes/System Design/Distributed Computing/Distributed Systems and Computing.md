@@ -1,7 +1,7 @@
 ---
-dg-publish: true
-alias: [Distributed Computing]
+{"dg-publish":true,"permalink":"/system-design/distributed-computing/distributed-systems-and-computing/"}
 ---
+
 #cse6603 
 
 See,
