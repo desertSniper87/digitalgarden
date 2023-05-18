@@ -1,7 +1,6 @@
 ---
-{"dg-publish":true,"permalink":"/system-design/distributed-computing/p2-p-systems/chords/"}
+dg-publish: true
 ---
-
 
 #cse6603 
 
