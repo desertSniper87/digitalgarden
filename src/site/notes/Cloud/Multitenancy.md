@@ -1,7 +1,6 @@
 ---
-{"dg-publish":true,"permalink":"/cloud/multitenancy/"}
+dg-publish: true
 ---
-
 ## Guides
 
 ### 1. [What is multitenancy? | Multitenant architecture | Cloudflare](https://www.cloudflare.com/learning/cloud/what-is-multitenancy/)
