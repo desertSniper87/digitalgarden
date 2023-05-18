@@ -1,6 +1,7 @@
 ---
-dg-publish: true
+{"dg-publish":true,"permalink":"/system-design/distributed-computing/bully-algorithm/"}
 ---
+
 #cse6603 
 
 See, [Wikipedia](https://en.wikipedia.org/wiki/Bully_algorithm), [Bhanu Priya](https://www.youtube.com/watch?v=R1FfoED7OGo), [colostate (good example)](https://www.cs.colostate.edu/~cs551/CourseNotes/Synchronization/BullyExample.html)
