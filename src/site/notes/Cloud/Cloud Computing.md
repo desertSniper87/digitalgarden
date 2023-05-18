@@ -1,7 +1,6 @@
 ---
-{"dg-publish":true,"permalink":"/cloud/cloud-computing/"}
+dg-publish: true
 ---
-
 
 #cse6603 
 
