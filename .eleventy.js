@@ -1,245 +1,455 @@
 const slugify = require("@sindresorhus/slugify");
 const markdownIt = require("markdown-it");
-const fs = require('fs');
-const matter = require('gray-matter');
-const faviconPlugin = require('eleventy-favicon');
-module.exports = function(eleventyConfig) {
+const fs = require("fs");
+const matter = require("gray-matter");
+const faviconPlugin = require("eleventy-favicon");
+const tocPlugin = require("eleventy-plugin-nesting-toc");
+const { parse } = require("node-html-parser");
+const htmlMinifier = require("html-minifier");
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 
-    let markdownLib = markdownIt({
-            breaks: true,
-            html: true
-        })
-        .use(require("markdown-it-footnote"))
-        .use(require('markdown-it-mathjax3'), {
-            tex: {
-                inlineMath: [
-                    ["$", "$"]
-                ]
-            },
-            options: {
-                skipHtmlTags: { '[-]': ['pre'] }
-            }
-        })
-        .use(require('markdown-it-task-checkbox'), {
-            disabled: true,
-            divWrap: false,
-            divClass: 'checkbox',
-            idPrefix: 'cbx_',
-            ulClass: 'task-list',
-            liClass: 'task-list-item'
-        })
-        .use(require('markdown-it-plantuml'), {
-            openMarker: '```plantuml',
-            closeMarker: '```'
-        })
-        .use(namedHeadingsFilter)
-        .use(function(md) {
-            //https://github.com/DCsunset/markdown-it-mermaid-plugin
-            const origFenceRule = md.renderer.rules.fence || function(tokens, idx, options, env, self) {
-                return self.renderToken(tokens, idx, options, env, self);
-            };
-            md.renderer.rules.fence = (tokens, idx, options, env, slf) => {
-                const token = tokens[idx];
-                if (token.info === 'mermaid') {
-                    const code = token.content.trim();
-                    return `<pre class="mermaid">${code}</pre>`;
-                }
-                if (token.info === 'transclusion') {
-                    const code = token.content.trim();
-                    return `<div class="transclusion">${md.render(code)}</div>`;
-                }
-                if (token.info.startsWith("ad-")) {
-                    const code = token.content.trim();
-                    if (code && code.toLowerCase().startsWith("title:")) {
-                        const title = code.substring(6, code.indexOf("\n"));
-                        const titleDiv = title ? `<div class="admonition-title">${title}</div>` : '';
-                        return `<div class="language-${token.info} admonition admonition-example admonition-plugin">${titleDiv}${md.render(code.slice(code.indexOf("\n")))}</div>`;
-                    }
+const { headerToId, namedHeadingsFilter } = require("./src/helpers/utils");
+const {
+  userMarkdownSetup,
+  userEleventySetup,
+} = require("./src/helpers/userSetup");
 
-                    const title = `<div class="admonition-title">${token.info.charAt(3).toUpperCase()}${token.info.substring(4).toLowerCase()}</div>`;
-                    return `<div class="language-${token.info} admonition admonition-example admonition-plugin">${title}${md.render(code)}</div>`;
+const Image = require("@11ty/eleventy-img");
+function transformImage(src, cls, alt, sizes, widths = ["500", "700", "auto"]) {
+  let options = {
+    widths: widths,
+    formats: ["webp", "jpeg"],
+    outputDir: "./dist/img/optimized",
+    urlPath: "/img/optimized",
+  };
 
-                }
+  // generate images, while this is async we don’t wait
+  Image(src, options);
+  let metadata = Image.statsSync(src, options);
+  return metadata;
+}
 
-                // Other languages
-                return origFenceRule(tokens, idx, options, env, slf);
-            };
+const tagRegex = /(^|\s|\>)(#[^\s!@#$%^&*()=+\.,\[{\]};:'"?><]+)(?!([^<]*>))/g;
 
-
-
-            const defaultImageRule = md.renderer.rules.image || function(tokens, idx, options, env, self) {
-                return self.renderToken(tokens, idx, options, env, self);
-            };
-            md.renderer.rules.image = (tokens, idx, options, env, self) => {
-                const imageName = tokens[idx].content;
-                const [fileName, width] = imageName.split("|");
-                if (width) {
-                    const widthIndex = tokens[idx].attrIndex('width');
-                    const widthAttr = `${width}px`;
-                    if (widthIndex < 0) {
-                        tokens[idx].attrPush(['width', widthAttr]);
-                    } else {
-                        tokens[idx].attrs[widthIndex][1] = widthAttr;
-                    }
-                }
-
-                return defaultImageRule(tokens, idx, options, env, self);
-            };
-
-
-            const defaultLinkRule = md.renderer.rules.link_open || function(tokens, idx, options, env, self) {
-                return self.renderToken(tokens, idx, options, env, self);
-            };
-            md.renderer.rules.link_open = function(tokens, idx, options, env, self) {
-                const aIndex = tokens[idx].attrIndex('target');
-                const classIndex = tokens[idx].attrIndex('class');
-
-                if (aIndex < 0) {
-                    tokens[idx].attrPush(['target', '_blank']);
-                } else {
-                    tokens[idx].attrs[aIndex][1] = '_blank';
-                }
-
-                if (classIndex < 0) {
-                    tokens[idx].attrPush(['class', 'external-link']);
-                } else {
-                    tokens[idx].attrs[classIndex][1] = 'external-link';
-                }
-
-                return defaultLinkRule(tokens, idx, options, env, self);
-            };
-
-        });
-
-    eleventyConfig.setLibrary("md", markdownLib);
-
-    eleventyConfig.addFilter('link', function(str) {
-        return str && str.replace(/\[\[(.*?\|.*?)\]\]/g, function(match, p1) {
-            //Check if it is an embedded excalidraw drawing or mathjax javascript
-            if (p1.indexOf("],[") > -1 || p1.indexOf('"$"') > -1) {
-                return match;
-            }
-            const [fileLink, linkTitle] = p1.split("|");
-
-            let fileName = fileLink;
-            let header = "";
-            let headerLinkPath = "";
-            if (fileLink.includes("#")) {
-                [fileName, header] = fileLink.split("#");
-                headerLinkPath = `#${headerToId(header)}`;
-            }
-
-            let permalink = `/notes/${slugify(fileName)}`;
-            const title = linkTitle ? linkTitle : fileName;
-            let deadLink = false;
-
-
-            try {
-                const startPath = './src/site/notes/';
-                const fullPath = fileName.endsWith('.md') ? 
-                    `${startPath}${fileName}`
-                    :`${startPath}${fileName}.md`;
-                const file = fs.readFileSync(fullPath, 'utf8');
-                const frontMatter = matter(file);
-                if (frontMatter.data.permalink) {
-                    permalink = frontMatter.data.permalink;
-                }
-            } catch {
-                deadLink = true;
-            }
-
-            return `<a class="internal-link ${deadLink?'is-unresolved':''}" href="${permalink}${headerLinkPath}">${title}</a>`;
-        });
+module.exports = function (eleventyConfig) {
+  eleventyConfig.setLiquidOptions({
+    dynamicPartials: true,
+  });
+  let markdownLib = markdownIt({
+    breaks: true,
+    html: true,
+  })
+    .use(require("markdown-it-anchor"), {
+      slugify: headerToId,
     })
+    .use(require("markdown-it-mark"))
+    .use(require("markdown-it-footnote"))
+    .use(function (md) {
+      md.renderer.rules.hashtag_open = function (tokens, idx) {
+        return '<a class="tag" onclick="toggleTagSearch(this)">';
+      };
+    })
+    .use(require("markdown-it-mathjax3"), {
+      tex: {
+        inlineMath: [["$", "$"]],
+      },
+      options: {
+        skipHtmlTags: { "[-]": ["pre"] },
+      },
+    })
+    .use(require("markdown-it-attrs"))
+    .use(require("markdown-it-task-checkbox"), {
+      disabled: true,
+      divWrap: false,
+      divClass: "checkbox",
+      idPrefix: "cbx_",
+      ulClass: "task-list",
+      liClass: "task-list-item",
+    })
+    .use(require("markdown-it-plantuml"), {
+      openMarker: "```plantuml",
+      closeMarker: "```",
+    })
+    .use(namedHeadingsFilter)
+    .use(function (md) {
+      //https://github.com/DCsunset/markdown-it-mermaid-plugin
+      const origFenceRule =
+        md.renderer.rules.fence ||
+        function (tokens, idx, options, env, self) {
+          return self.renderToken(tokens, idx, options, env, self);
+        };
+      md.renderer.rules.fence = (tokens, idx, options, env, slf) => {
+        const token = tokens[idx];
+        if (token.info === "mermaid") {
+          const code = token.content.trim();
+          return `<pre class="mermaid">${code}</pre>`;
+        }
+        if (token.info === "transclusion") {
+          const code = token.content.trim();
+          return `<div class="transclusion">${md.render(code)}</div>`;
+        }
+        if (token.info.startsWith("ad-")) {
+          const code = token.content.trim();
+          if (code && code.toLowerCase().startsWith("title:")) {
+            const title = code.substring(6, code.indexOf("\n"));
+            const titleDiv = title
+              ? `<div class="callout-title"><div class="callout-title-inner">${title}</div></div>`
+              : "";
 
-    eleventyConfig.addFilter('highlight', function(str) {
-        return str && str.replace(/\=\=(.*?)\=\=/g, function(match, p1) {
-            return `<mark>${p1}</mark>`;
-        });
-    });
+            return `<div class="callout" data-callout="${
+              token.info
+            }">${titleDiv}\n<div class="callout-content">${md.render(
+              code.slice(code.indexOf("\n"))
+            )}</div></div>`;
+          }
 
+          const title = `<div class="callout-title"><div class="callout-title-inner">${token.info
+            .charAt(3)
+            .toUpperCase()}${token.info
+            .substring(4)
+            .toLowerCase()}</div></div>`;
 
-    eleventyConfig.addTransform('callout-block', function(str) {
-        return str && str.replace(/<blockquote>((.|\n)*?)<\/blockquote>/g, function(match, content) {
-            let titleDiv = "";
-            let calloutType = "";
-            const calloutMeta = /\[!(\w*)\](\s?.*)/g;
-            if (!content.match(calloutMeta)) {
-                return match;
-            }
+          return `<div class="callout" data-callout="${
+            token.info
+          }">${title}\n<div class="callout-content">${md.render(
+            code
+          )}</div></div>`;
+        }
 
-            content = content.replace(calloutMeta, function(metaInfoMatch, callout, title) {
-                calloutType = callout;
-                titleDiv = title.replace("<br>", "") ?
-                    `<div class="admonition-title">${title}</div>` :
-                    `<div class="admonition-title">${callout.charAt(0).toUpperCase()}${callout.substring(1).toLowerCase()}</div>`;
-                return "";
-            });
+        // Other languages
+        return origFenceRule(tokens, idx, options, env, slf);
+      };
 
-            return `<div class="callout-${calloutType?.toLowerCase()} admonition admonition-example admonition-plugin">
-                ${titleDiv}
-                ${content}
-            </div>`;
-        });
-    });
+      const defaultImageRule =
+        md.renderer.rules.image ||
+        function (tokens, idx, options, env, self) {
+          return self.renderToken(tokens, idx, options, env, self);
+        };
+      md.renderer.rules.image = (tokens, idx, options, env, self) => {
+        const imageName = tokens[idx].content;
+        const [fileName, width] = imageName.split("|");
+        if (width) {
+          const widthIndex = tokens[idx].attrIndex("width");
+          const widthAttr = `${width}px`;
+          if (widthIndex < 0) {
+            tokens[idx].attrPush(["width", widthAttr]);
+          } else {
+            tokens[idx].attrs[widthIndex][1] = widthAttr;
+          }
+        }
 
-    eleventyConfig.addPassthroughCopy("src/site/img");
-    eleventyConfig.addPlugin(faviconPlugin, { destination: 'dist' });
+        return defaultImageRule(tokens, idx, options, env, self);
+      };
 
-    return {
-        dir: {
-            input: "src/site",
-            output: "dist",
-            data: `_data`
-        },
-        templateFormats: ["njk", "md", "11ty.js", "css"],
-        htmlTemplateEngine: "njk",
-        markdownTemplateEngine: "njk",
-        passthroughFileCopy: true,
+      const defaultLinkRule =
+        md.renderer.rules.link_open ||
+        function (tokens, idx, options, env, self) {
+          return self.renderToken(tokens, idx, options, env, self);
+        };
+      md.renderer.rules.link_open = function (tokens, idx, options, env, self) {
+        const aIndex = tokens[idx].attrIndex("target");
+        const classIndex = tokens[idx].attrIndex("class");
+
+        if (aIndex < 0) {
+          tokens[idx].attrPush(["target", "_blank"]);
+        } else {
+          tokens[idx].attrs[aIndex][1] = "_blank";
+        }
+
+        if (classIndex < 0) {
+          tokens[idx].attrPush(["class", "external-link"]);
+        } else {
+          tokens[idx].attrs[classIndex][1] = "external-link";
+        }
+
+        return defaultLinkRule(tokens, idx, options, env, self);
+      };
+    })
+    .use(userMarkdownSetup);
+
+  eleventyConfig.setLibrary("md", markdownLib);
+
+  eleventyConfig.addFilter("link", function (str) {
+    return (
+      str &&
+      str.replace(/\[\[(.*?\|.*?)\]\]/g, function (match, p1) {
+        //Check if it is an embedded excalidraw drawing or mathjax javascript
+        if (p1.indexOf("],[") > -1 || p1.indexOf('"$"') > -1) {
+          return match;
+        }
+        const [fileLink, linkTitle] = p1.split("|");
+
+        let fileName = fileLink.replaceAll("&amp;", "&");
+        let header = "";
+        let headerLinkPath = "";
+        if (fileLink.includes("#")) {
+          [fileName, header] = fileLink.split("#");
+          headerLinkPath = `#${headerToId(header)}`;
+        }
+
+        let permalink = `/notes/${slugify(fileName)}`;
+        let noteIcon = process.env.NOTE_ICON_DEFAULT;
+        const title = linkTitle ? linkTitle : fileName;
+        let deadLink = false;
+
+        try {
+          const startPath = "./src/site/notes/";
+          const fullPath = fileName.endsWith(".md")
+            ? `${startPath}${fileName}`
+            : `${startPath}${fileName}.md`;
+          const file = fs.readFileSync(fullPath, "utf8");
+          const frontMatter = matter(file);
+          if (frontMatter.data.permalink) {
+            permalink = frontMatter.data.permalink;
+          }
+          if (
+            frontMatter.data.tags &&
+            frontMatter.data.tags.indexOf("gardenEntry") != -1
+          ) {
+            permalink = "/";
+          }
+          if (frontMatter.data.noteIcon) {
+            noteIcon = frontMatter.data.noteIcon;
+          }
+        } catch {
+          deadLink = true;
+        }
+
+        return `<a class="internal-link ${
+          deadLink ? "is-unresolved" : ""
+        }" ${deadLink ? "" : 'data-note-icon="' + noteIcon + '"'} href="${permalink}${headerLinkPath}">${title}</a>`;
+      })
+    );
+  });
+
+  eleventyConfig.addFilter("taggify", function (str) {
+    return (
+      str &&
+      str.replace(tagRegex, function (match, precede, tag) {
+        return `${precede}<a class="tag" onclick="toggleTagSearch(this)" data-content="${tag}">${tag}</a>`;
+      })
+    );
+  });
+
+  eleventyConfig.addFilter("searchableTags", function (str) {
+    let tags;
+    let match = str && str.match(tagRegex);
+    if (match) {
+      tags = match
+        .map((m) => {
+          return `"${m.split("#")[1]}"`;
+        })
+        .join(", ");
+    }
+    if (tags) {
+      return `${tags},`;
+    } else {
+      return "";
+    }
+  });
+
+  eleventyConfig.addFilter("hideDataview", function (str) {
+    return (
+      str &&
+      str.replace(/\(\S+\:\:(.*)\)/g, function (_, value) {
+        return value.trim();
+      })
+    );
+  });
+
+  eleventyConfig.addTransform("callout-block", function (str) {
+    const parsed = parse(str);
+
+    const transformCalloutBlocks = (
+      blockquotes = parsed.querySelectorAll("blockquote")
+    ) => {
+      for (const blockquote of blockquotes) {
+        transformCalloutBlocks(blockquote.querySelectorAll("blockquote"));
+
+        let content = blockquote.innerHTML;
+
+        let titleDiv = "";
+        let calloutType = "";
+        let isCollapsable;
+        let isCollapsed;
+        const calloutMeta = /\[!([\w-]*)\](\+|\-){0,1}(\s?.*)/;
+        if (!content.match(calloutMeta)) {
+          continue;
+        }
+
+        content = content.replace(
+          calloutMeta,
+          function (metaInfoMatch, callout, collapse, title) {
+            isCollapsable = Boolean(collapse);
+            isCollapsed = collapse === "-";
+            const titleText = title.replace(/(<\/{0,1}\w+>)/, "")
+              ? title
+              : `${callout.charAt(0).toUpperCase()}${callout
+                  .substring(1)
+                  .toLowerCase()}`;
+            const fold = isCollapsable
+              ? `<div class="callout-fold"><i icon-name="chevron-down"></i></div>`
+              : ``;
+
+            calloutType = callout;
+            titleDiv = `<div class="callout-title"><div class="callout-title-inner">${titleText}</div>${fold}</div>`;
+            return "";
+          }
+        );
+
+        blockquote.tagName = "div";
+        blockquote.classList.add("callout");
+        blockquote.classList.add(isCollapsable ? "is-collapsible" : "");
+        blockquote.classList.add(isCollapsed ? "is-collapsed" : "");
+        blockquote.setAttribute("data-callout", calloutType.toLowerCase());
+        blockquote.innerHTML = `${titleDiv}\n<div class="callout-content">${content}</div>`;
+      }
     };
 
-};
+    transformCalloutBlocks();
 
-function headerToId(heading) {
-    return slugify(heading);
-}
+    return str && parsed.innerHTML;
+  });
 
-//https://github.com/rstacruz/markdown-it-named-headings/blob/master/index.js
-function namedHeadingsFilter(md, options) {
-    md.core.ruler.push('named_headings', namedHeadings.bind(null, md));
-}
+  eleventyConfig.addTransform("picture", function (str) {
+    const parsed = parse(str);
+    for (const t of parsed.querySelectorAll(".cm-s-obsidian img")) {
+      const src = t.getAttribute("src");
+      if (src && src.startsWith("/") && !src.endsWith(".svg")) {
+        const cls = t.classList;
+        const alt = t.getAttribute("alt");
 
-function namedHeadings(md, state) {
+        try {
+          const meta = transformImage(
+            "./src/site" + decodeURI(t.getAttribute("src")),
+            cls.toString(),
+            alt,
+            ["(max-width: 480px)", "(max-width: 1024px)"]
+          );
 
-    var ids = {}
-
-    state.tokens.forEach(function(token, i) {
-        if (token.type === 'heading_open') {
-            var text = md.renderer.render(state.tokens[i + 1].children, md.options)
-            var id = headerToId(text);
-            var uniqId = uncollide(ids, id)
-            ids[uniqId] = true
-            setAttr(token, 'id', uniqId)
+          if (meta) {
+            t.tagName = "picture";
+            t.innerHTML = `<source
+      media="(max-width:480px)"
+      srcset="${meta.webp[0].url}"
+      type="image/webp"
+    />
+    <source
+      media="(max-width:480px)"
+      srcset="${meta.jpeg[0].url}"
+    />
+    <source
+      media="(max-width:1920px)"
+      srcset="${meta.webp[1].url}"
+      type="image/webp"
+    />
+    <source
+      media="(max-width:1920px)"
+      srcset="${meta.jpeg[1].url}"
+    />
+    <img
+      class="${cls.toString()}"
+      src="${src}"
+      alt="${alt}"
+    />`;
+          }
+        } catch {
+          // Make it fault tolarent.
         }
-    })
-}
-
-function uncollide(ids, id) {
-    if (!ids[id]) return id
-    var i = 1
-    while (ids[id + '-' + i]) { i++ }
-    return id + '-' + i
-}
-
-function setAttr(token, attr, value, options) {
-    var idx = token.attrIndex(attr)
-
-    if (idx === -1) {
-        token.attrPush([attr, value])
-    } else if (options && options.append) {
-        token.attrs[idx][1] =
-            token.attrs[idx][1] + ' ' + value
-    } else {
-        token.attrs[idx][1] = value
+      }
     }
-}
+    return str && parsed.innerHTML;
+  });
+
+  eleventyConfig.addTransform("table", function (str) {
+    const parsed = parse(str);
+    for (const t of parsed.querySelectorAll(".cm-s-obsidian > table")) {
+      let inner = t.innerHTML;
+      t.tagName = "div";
+      t.classList.add("table-wrapper");
+      t.innerHTML = `<table>${inner}</table>`;
+    }
+
+    for (const t of parsed.querySelectorAll(
+      ".cm-s-obsidian > .block-language-dataview > table"
+    )) {
+      t.classList.add("dataview");
+      t.classList.add("table-view-table");
+      t.querySelector("thead").classList.add("table-view-thead");
+      t.querySelector("tbody").classList.add("table-view-tbody");
+      t.querySelectorAll("thead > tr").forEach((tr) => {
+        tr.classList.add("table-view-tr-header");
+      });
+      t.querySelectorAll("thead > tr > th").forEach((th) => {
+        th.classList.add("table-view-th");
+      });
+    }
+    return str && parsed.innerHTML;
+  });
+
+  eleventyConfig.addTransform("htmlMinifier", (content, outputPath) => {
+    if (
+      process.env.NODE_ENV === "production" &&
+      outputPath &&
+      outputPath.endsWith(".html")
+    ) {
+      return htmlMinifier.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true,
+        minifyCSS: true,
+        minifyJS: true,
+        keepClosingSlash: true,
+      });
+    }
+    return content;
+  });
+
+  eleventyConfig.addPassthroughCopy("src/site/img");
+  eleventyConfig.addPassthroughCopy("src/site/scripts");
+  eleventyConfig.addPassthroughCopy("src/site/styles/_theme.*.css");
+  eleventyConfig.addPlugin(faviconPlugin, { destination: "dist" });
+  eleventyConfig.addPlugin(tocPlugin, {
+    ul: true,
+    tags: ["h1", "h2", "h3", "h4", "h5", "h6"],
+  });
+ 
+
+  eleventyConfig.addFilter("dateToZulu", function (date) {
+    if (!date) return "";
+    return new Date(date).toISOString("dd-MM-yyyyTHH:mm:ssZ");
+  });
+  eleventyConfig.addFilter("jsonify", function (variable) {
+    return JSON.stringify(variable) || '""';
+  });
+
+  eleventyConfig.addFilter("validJson", function (variable) {
+    if (Array.isArray(variable)) {
+      return variable.map((x) => x.replaceAll("\\", "\\\\")).join(",");
+    } else if (typeof variable === "string") {
+      return variable.replaceAll("\\", "\\\\");
+    }
+    return variable;
+  });
+
+ eleventyConfig.addPlugin(pluginRss, {
+    posthtmlRenderOptions: {
+      closingSingleTag: "slash",
+      singleTags: ["link"],
+    },
+  });
+
+  userEleventySetup(eleventyConfig);
+
+  return {
+    dir: {
+      input: "src/site",
+      output: "dist",
+      data: `_data`,
+    },
+    templateFormats: ["njk", "md", "11ty.js"],
+    htmlTemplateEngine: "njk",
+    markdownTemplateEngine: "njk",
+    passthroughFileCopy: true,
+  };
+};
