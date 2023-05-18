@@ -1,6 +1,7 @@
 ---
-dg-publish: true
+{"dg-publish":true,"permalink":"/net/total-order-multicast/"}
 ---
+
 #cse6603 
 
 Also known as or atomic order multicast
