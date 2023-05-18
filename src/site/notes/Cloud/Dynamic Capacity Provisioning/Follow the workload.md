@@ -1,6 +1,7 @@
 ---
-dg-publish: true
+{"dg-publish":true,"permalink":"/cloud/dynamic-capacity-provisioning/follow-the-workload/"}
 ---
+
 
 #cse6603 
 
