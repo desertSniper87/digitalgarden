@@ -1,6 +1,7 @@
 ---
-dg-publish: true
+{"dg-publish":true,"permalink":"/db/serializability/"}
 ---
+
 - Given a set of transactions, we are guaranteed correctness if they
 are executed serially.
 - To allow some degree of concurrency among transactions, the notion
