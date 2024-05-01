@@ -1,7 +1,6 @@
 ---
-{"dg-publish":true,"permalink":"/db/distributed-database/sql/cockroach-db/cockroach-db-backup-and-restore/"}
+dg-publish: true
 ---
-
 ## Links
 
 1. [`BACKUP`](https://www.cockroachlabs.com/docs/v22.1/backup) statement to efficiently back up cluster's schemas and data to NFS
