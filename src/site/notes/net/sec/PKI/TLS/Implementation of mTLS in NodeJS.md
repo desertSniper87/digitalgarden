@@ -1,7 +1,6 @@
 ---
-{"dg-publish":true,"permalink":"/net/sec/pki/tls/implementation-of-m-tls-in-node-js/"}
+dg-publish: true
 ---
-
 
 ## References
 
@@ -75,7 +74,7 @@ Here common name is localhost
 openssl req \
   -new \
   -key server.key \
-  -subj '/CN=bcc-ca-website.org' \
+  -subj '/CN=mtls.bcc-ca.gov.bd' \
   -out server.csr
 ```
 
