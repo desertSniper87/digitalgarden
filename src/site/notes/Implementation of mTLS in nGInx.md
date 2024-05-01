@@ -1,7 +1,6 @@
 ---
-{"dg-publish":true,"permalink":"/implementation-of-m-tls-in-n-g-inx/"}
+dg-publish: true
 ---
-
 
 ## Links
 
