@@ -1,10 +1,11 @@
 ---
-{"dg-publish":true,"permalink":"/system-design/distributed-computing/paxos/"}
+dg-publish: true
+tags:
+  - cse6603
 ---
 
 
-#cse6603 
-
+- [[System Design/Distributed Computing/Paxos - Interesting Links\|Paxos - Interesting Links]]
 
 # Paxos Protocol
 
@@ -72,3 +73,6 @@ Three phases.
 -   **Commit Phase**: let all the replicas know that a value has been chosen.
 
 [What is Paxos Consensus Algorithm? Definition & FAQs | ScyllaDB](https://www.scylladb.com/glossary/paxos-consensus-algorithm/)
+
+
+
