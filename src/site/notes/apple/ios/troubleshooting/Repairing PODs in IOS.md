@@ -1,13 +1,17 @@
 ---
-{"dg-publish":true,"permalink":"/apple/ios/troubleshooting/repairing-po-ds-in-ios/"}
+aliases:
+  - pod reset
+dg-publish: true
 ---
 
----
-alias: [pod reset]
----
 
 ```bash
-cd ios && pod deintegrate && pod install --repo-update && cd ..
+cd ios && pod deintegrate && pod install --repo-update --verbose && cd ..
 ```
 
 If it fails, delete `podfile.lock`
+
+
+```bash
+cd ios && rm Podfile.lock && pod deintegrate && pod install --repo-update --verbose && cd ..
+```
