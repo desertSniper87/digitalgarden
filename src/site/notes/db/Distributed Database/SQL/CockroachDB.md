@@ -1,7 +1,7 @@
 ---
-{"dg-publish":true,"permalink":"/db/distributed-database/sql/cockroach-db/"}
+alias: [cockroach-db]
+dg-publish: true
 ---
-
 
 1. A [[db/database\|database]] that automatically scales, rebalances, and repairs itself.
 
