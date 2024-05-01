@@ -1,13 +1,20 @@
 ---
-{"dg-publish":true,"permalink":"/nginx/"}
+dg-publish: true
 ---
-
 
 ## Links
 
 1. [[nginx/nginx as a load balancer\|nginx/nginx as a load balancer]]
 2. [[nginx stream\|nginx stream]]
+3. [[nginx - serve static websites\|nginx - serve static websites]]
+4. [[nginx - run php\|nginx - run php]]
+5. [[nginx - ssl-tls config\|nginx - ssl-tls config]]
 
+## Check nginx config
+
+```bash
+nginx -t
+```
 ## Installation
 
 ### [[os/Linux/ubuntu\|ubuntu]]
@@ -39,3 +46,8 @@ docker run -it --rm -d -p 8080:80 --name web -v /root/test_webroot:/usr/share/ng
 ### Reference 
 
 1. [java - Unable to SSL Pass through Ingress Nginx Controller - Stack Overflow](https://stackoverflow.com/questions/66196561/unable-to-ssl-pass-through-ingress-nginx-controller)
+
+
+## Redirection
+
+- https://stackoverflow.com/questions/26587354/how-to-implement-nginx-case-insensitive-directory-location-redirection-301
