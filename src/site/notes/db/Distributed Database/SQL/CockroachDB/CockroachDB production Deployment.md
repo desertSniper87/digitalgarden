@@ -1,7 +1,6 @@
 ---
-{"dg-publish":true,"permalink":"/db/distributed-database/sql/cockroach-db/cockroach-db-production-deployment/"}
+dg-publish: true
 ---
-
 
 ## Time Sync
 
