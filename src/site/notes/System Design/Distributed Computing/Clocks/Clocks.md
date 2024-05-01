@@ -1,7 +1,6 @@
 ---
-{"dg-publish":true,"permalink":"/system-design/distributed-computing/clocks/clocks/"}
+dg-publish: true
 ---
-
 #cse6603 
 
 ## References
