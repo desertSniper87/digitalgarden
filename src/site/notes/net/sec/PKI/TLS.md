@@ -5,7 +5,7 @@
 
 - Transport Layer Security 
 - [Wikipedia](https://en.wikipedia.org/wiki/Transport_Layer_Security)
-- Successor protocol to [[SSL\|SSL]]
+- Successor protocol to [[ssl\|SSL]]
 
 
 At the heart of TLS is Public Key Infrastructure ([[net/sec/PKI\|PKI]]) and in particular [[net/sec/x509\|X.509]] certificates.
@@ -14,6 +14,8 @@ At the heart of TLS is Public Key Infrastructure ([[net/sec/PKI\|PKI]]) and in p
 ## Links
 
 1. [[sre/Tools/openssl\|openssl]]
+2. [[Debugging SSL\|Debugging SSL]]
+3. [[java/spring/Debugging SSL in Spring\|Debugging SSL in Spring]]
 
 
 ## Issues
