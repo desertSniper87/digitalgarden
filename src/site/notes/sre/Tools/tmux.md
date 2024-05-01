@@ -1,10 +1,19 @@
 ---
-{"dg-publish":true,"permalink":"/sre/tools/tmux/"}
+dg-publish: true
+aliases: []
+---
+## Links
+
+- [[Tmux - rename pane\|Tmux - rename pane]]
+- [[Tmux - rename session\|Tmux - rename session]]
+
 ---
 
+- [[TMUX Cheatsheet\|TMUX Cheatsheet]]
 
-https://linuxhint.com/customize-tmux-configuration/
 
+- https://linuxhint.com/customize-tmux-configuration/
+- https://www.linuxtrainingacademy.com/tmux-tutorial/#:~:text=To%20attach%20or%20reattach%20to,are%20all%20the%20same%20command.
 ## Stackoverflow posts
 
 - Mouse mode: https://superuser.com/questions/210125/scroll-shell-output-with-mouse-in-tmux
@@ -13,14 +22,7 @@ https://linuxhint.com/customize-tmux-configuration/
 ## Increase scrollback buffer
 
 
-## TPM
-
-### Installation
-
-```bash
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-```
-
+[[Tmux Plugin Manager - TPM\|Tmux Plugin Manager - TPM]]
 ## Reference
 
 1. [Getting started with tmux | ITTavern.com](https://ittavern.com/getting-started-with-tmux/)
