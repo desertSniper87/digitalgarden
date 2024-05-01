@@ -1,16 +1,18 @@
 ---
-{"dg-publish":true,"permalink":"/javascript/react-native/expo/expo/"}
+dg-publish: true
+alias: [expo-cli, expo ios images]
 ---
-
 
 ## Links
 
+0. [[Expo - Getting Started\|Expo - Getting Started]]
 1. [[Javascript/React Native/expo/Internal Ad-hoc distribution (iOS)\|Internal Ad-hoc distribution (iOS)]]
 2. [[expo-notifications\|expo-notifications]]
 3. [[Javascript/React Native/expo/Expo Builds for production\|Expo Builds for production]]
 4. [[expo-errors\|expo-errors]]
 5. [[expo-build\|expo-build]]
 6. [[Javascript/React Native/expo/expo-run\|expo-run]]
+7. [[expo-upgrade\|expo-upgrade]]
 
 ### See also
 
