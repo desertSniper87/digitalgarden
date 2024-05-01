@@ -1,7 +1,6 @@
 ---
-{"dg-publish":true,"permalink":"/cloud/dynamic-capacity-provisioning/valley-filling-workload/"}
+dg-publish: true
 ---
-
 
 
 #cse6603
