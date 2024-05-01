@@ -1,7 +1,7 @@
 ---
-{"dg-publish":true,"permalink":"/net/sec/pki/tls/tls-client-authentication/"}
+alias: [mutual TLS, mTLS]
+dg-publish: true
 ---
-
 
 >In a Zero trust network nothing is trusted by default. When something calls our API, how can we be sure the caller is the right one? With mutual TLS or simply mTLS, we validate parties on the other end of the connection are who they claim to be. *[Mihaita Tinta](https://medium.com/ing-tech-romania/a-simple-mtls-guide-for-spring-boot-microservices-c6bfc9878369)*
 
