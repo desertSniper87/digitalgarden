@@ -31,6 +31,8 @@ having the property that
  
 $\gamma_{dR} (K_{1,n−1}) = 3$
 
+## Resources
+
 - [Mathematics | Free Full-Text | Double Roman Domination: A Survey (mdpi.com)](https://www.mdpi.com/2227-7390/11/2/351)
 - [Double Roman domination - ScienceDirect](https://www.sciencedirect.com/science/article/pii/S0166218X1630155X?via%3Dihub) - **(Beeler et al. 2016)**
 - [IEEE Xplore Full-Text PDF: DRD - A survey](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8694775)
@@ -39,6 +41,7 @@ $\gamma_{dR} (K_{1,n−1}) = 3$
 
 ### [[Bipartite Graph\|Bipartite Graph]]
 
+TBD
 ## Github Repos
 
 - [maticdragan/sdrdp: This is a public repo containing instances and rough results on ILP models for solving Signed double Roman domination and Perfect double Roman domination problems (github.com)](https://github.com/maticdragan/sdrdp)
