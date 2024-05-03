@@ -1,7 +1,7 @@
 ---
-dg-publish: true
-aliases: []
+{"dg-publish":true,"permalink":"/sre/tools/tmux/"}
 ---
+
 ## Links
 
 - [[Tmux - rename pane\|Tmux - rename pane]]
