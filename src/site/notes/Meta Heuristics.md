@@ -5,7 +5,7 @@
 
 ## Applicable for [[graph\|graph]] optimization problems
 
-- [[Genetic Algorithms\|Genetic Algorithms]] (GA)
+- [[Genetic Algorithm\|Genetic Algorithm]] (GA)
 - [[Simulated Annealing\|Simulated Annealing]] (SA)
 - [[Tabu Search\|Tabu Search]] (TS)
 - [[Ant Colony Optimization\|Ant Colony Optimization]] (ACO)
