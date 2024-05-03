@@ -1,8 +1,7 @@
 ---
-dg-publish: true
-tags:
-  - cse6603
+{"dg-publish":true,"permalink":"/system-design/distributed-computing/paxos/","tags":["cse6603"]}
 ---
+
 
 
 - [[System Design/Distributed Computing/Paxos - Interesting Links\|Paxos - Interesting Links]]
