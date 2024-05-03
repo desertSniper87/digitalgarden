@@ -1,6 +1,7 @@
 ---
-dg-publish: true
+{"dg-publish":true,"permalink":"/deep-learning/"}
 ---
+
 
 
 - [[Deep Learning Books\|Deep Learning Books]]
@@ -22,10 +23,7 @@ dg-publish: true
 
 
 
----
-aliases:
-  - Ensembling in Neural Network
----
+
 
 Train several networks independently and average their outputs
 
