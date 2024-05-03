@@ -1,6 +1,7 @@
 ---
-dg-publish: true
+{"dg-publish":true,"permalink":"/db/key-value-stores/"}
 ---
+
 #cse6603 
 
 - Low cost scalable DBMSs
