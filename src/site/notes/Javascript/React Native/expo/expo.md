@@ -1,7 +1,7 @@
 ---
-dg-publish: true
-alias: [expo-cli, expo ios images]
+{"dg-publish":true,"permalink":"/javascript/react-native/expo/expo/"}
 ---
+
 
 ## Links
 
