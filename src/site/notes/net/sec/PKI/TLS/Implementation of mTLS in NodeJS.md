@@ -1,6 +1,7 @@
 ---
-dg-publish: true
+{"dg-publish":true,"permalink":"/net/sec/pki/tls/implementation-of-m-tls-in-node-js/"}
 ---
+
 
 ## References
 
