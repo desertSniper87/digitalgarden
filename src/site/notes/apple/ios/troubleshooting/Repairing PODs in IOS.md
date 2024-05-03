@@ -1,8 +1,7 @@
 ---
-aliases:
-  - pod reset
-dg-publish: true
+{"dg-publish":true,"permalink":"/apple/ios/troubleshooting/repairing-po-ds-in-ios/"}
 ---
+
 
 
 ```bash
