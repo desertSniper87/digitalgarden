@@ -1,7 +1,7 @@
 ---
-dg-publish: true
-alias: [key to pem, pfx to p7b, pfx to crt]
+{"dg-publish":true,"permalink":"/sre/tools/openssl/"}
 ---
+
 
 ## Docs
 
