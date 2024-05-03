@@ -1,9 +1,7 @@
 ---
-dg-publish: true
-aliases:
-  - cocoapods
-  - "Invalid `Podfile` file: cannot load such file -- ./scripts/autolinking."
+{"dg-publish":true,"permalink":"/apple/tools/installation-of-cocoapods/"}
 ---
+
 
 ## Prerequisites
 
