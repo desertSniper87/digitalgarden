@@ -17,6 +17,9 @@ At the heart of TLS is Public Key Infrastructure ([[net/sec/PKI\|PKI]]) and in p
 2. [[Debugging SSL\|Debugging SSL]]
 3. [[java/spring/Debugging SSL in Spring\|Debugging SSL in Spring]]
 
+## TLS CA certificates
+
+> Certificates are data structures that include a public key, a digital signature, and some other data. Clients use certificates to authenticate servers during TLS handshakes.
 
 ## Issues
 
@@ -30,3 +33,5 @@ At the heart of TLS is Public Key Infrastructure ([[net/sec/PKI\|PKI]]) and in p
 ## Links
 
 1. [[net/sec/PKI/TLS/TLS Client Authentication\|TLS Client Authentication]]
+
+https://carrickbartle.com/certificates.html
