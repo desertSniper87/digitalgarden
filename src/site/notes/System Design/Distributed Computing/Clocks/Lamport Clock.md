@@ -1,6 +1,7 @@
 ---
-dg-publish: true
+{"dg-publish":true,"permalink":"/system-design/distributed-computing/clocks/lamport-clock/"}
 ---
+
 
 
 #cse6603 
