@@ -61,6 +61,9 @@ Given a graph, a Roman Dominating Function is a function that labels the vertice
  -  [[planar graphs\|planar graphs]]
  -  [[grid graphs\|grid graphs]]
 
+##### [[Graph Data\|Graph Data]]
+
+- https://data.4tu.nl/datasets/07fe6888-88d3-48eb-bf5f-3102238e9aa8
 
 ## [[Meta Heuristics\|Meta Heuristics]] Solutions
 
