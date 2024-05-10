@@ -14,7 +14,7 @@ $f : V \rightarrow \{0, 1, 2, 3\}$
 
 having the property that 
 - if $f(v) = 0$, 
-	- then vertex $v$  must have at least two neighbors assigned 2 under $f$  or one neighbor with $f(w) = 3$,
+	- then vertex $v$  must have at least **two neighbours assigned *2*** under $f$  or one neighbor with $f(w) = 3$,
 - if $f(v) = 1$, 
 	- then vertex $v$ must have at least one neighbor with $f(w) \ge2$ .
 
@@ -23,13 +23,30 @@ having the property that
 
 ## Solution
 
-- [[Meta Heuristics\|Meta Heuristics]]
+### [[Meta Heuristics\|Meta Heuristics]]
 
+### Agarwal et. al. 24
+
+
+<div class="transclusion internal-embed is-loaded"><div class="markdown-embed">
+
+
+
+
+
+</div></div>
+
+
+#### [[Ant Colony Optimization\|ACO]] Solution
+
+- [[Double Roman Domination - Ant Colony Optimization Solution\|Double Roman Domination - Ant Colony Optimization Solution]]
 ## [[Star Graph\|Star Graph]]: $K_{1, n-1}$
 
 ![Double Roman Domination](https://www.researchgate.net/profile/Ana-Klobucar-Barisic/publication/346053100/figure/fig1/AS:962284222418944@1606437845398/Double-Roman-domination-on-star-graph.png)
  
 $\gamma_{dR} (K_{1,n−1}) = 3$
+
+
 
 ## Resources
 
