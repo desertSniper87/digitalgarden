@@ -6,6 +6,8 @@
 
 - [[Tmux - rename pane\|Tmux - rename pane]]
 - [[Tmux - rename session\|Tmux - rename session]]
+- [[Tmux Plugin Manager - TPM\|Tmux Plugin Manager - TPM]]
+- [[Tmux - go into scroll mode\|Tmux - go into scroll mode]]
 
 ---
 
@@ -22,7 +24,7 @@
 ## Increase scrollback buffer
 
 
-[[Tmux Plugin Manager - TPM\|Tmux Plugin Manager - TPM]]
+See,  [[Tmux Plugin Manager - TPM\|Tmux Plugin Manager - TPM]]
 ## Reference
 
 1. [Getting started with tmux | ITTavern.com](https://ittavern.com/getting-started-with-tmux/)
