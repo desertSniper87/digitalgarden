@@ -13,6 +13,7 @@
 2. [[OpenSSL - Generating PSK\|OpenSSL - Generating PSK]]
 3. [[OpenSSL - Installation\|OpenSSL - Installation]]
 4. [[OpenSSL - Generate CSR for SSL Certificate\|OpenSSL - Generate CSR for SSL Certificate]]
+5. [[OpenSSL - get fingerprint from certificate\|OpenSSL - get fingerprint from certificate]]
 
 
 ## Flags
