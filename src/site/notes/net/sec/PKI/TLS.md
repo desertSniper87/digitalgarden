@@ -5,7 +5,7 @@
 
 - Transport Layer Security 
 - [Wikipedia](https://en.wikipedia.org/wiki/Transport_Layer_Security)
-- Successor protocol to [[ssl\|SSL]]
+- Successor protocol to [[net/sec/PKI/TLS\|SSL]]
 
 
 At the heart of TLS is Public Key Infrastructure ([[net/sec/PKI\|PKI]]) and in particular [[net/sec/x509\|X.509]] certificates.
@@ -34,4 +34,13 @@ At the heart of TLS is Public Key Infrastructure ([[net/sec/PKI\|PKI]]) and in p
 
 1. [[net/sec/PKI/TLS/TLS Client Authentication\|TLS Client Authentication]]
 
-https://carrickbartle.com/certificates.html
+
+
+
+## Tools
+
+- [sslshopper](https://www.sslshopper.com/ssl-checker.html)
+- [Qualys SSL Labs](https://www.ssllabs.com/ssltest/analyze.html)
+## Docs
+
+- https://carrickbartle.com/certificates.html
