@@ -3,7 +3,7 @@
 ---
 
 
-## Applicable for [[graph\|graph]] optimization problems
+## Applicable for [[Graph\|Graph]] optimization problems
 
 - [[Genetic Algorithm\|Genetic Algorithm]] (GA)
 - [[Simulated Annealing\|Simulated Annealing]] (SA)
