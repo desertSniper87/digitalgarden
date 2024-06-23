@@ -12,8 +12,10 @@
 ## Repository
 
 - https://github.com/rhgrant10/acopy/blob/ff074ae2d86d2a28794fee928d4d2639b497cd58/acopy/ant.py#L159
+- https://github.com/hasnainroopawalla/ant-colony-optimization
 
 ### [[travelling salesman problem\|TSP]] Solution
+
 - https://github.com/yammadev/aco-tsp
 - [GitHub - Vampboy/Ant-Colony-Optimization: implementation of Ant colony Optimization using Python](https://github.com/Vampboy/Ant-Colony-Optimization)
 
@@ -23,7 +25,8 @@
 ## Resources
 
 - [towardsdatascience](https://towardsdatascience.com/the-inspiration-of-an-ant-colony-optimization-f377568ea03f#:~:text=Let%20consider%20two%20ants%20choose,food%20earlier%20than%20the%20other.)
-
+- https://web.archive.org/web/20240525184440/https://indiaai.gov.in/article/understanding-ant-colony-optimization-algorithms
+- https://www.upperinc.com/glossary/route-optimization/ant-colony-optimization/
 
 ### Video 
 
@@ -40,3 +43,8 @@ https://python.plainenglish.io/ant-colony-optimization-for-finding-the-optimal-w
 
 - Visibility Factor
 - Pheromone factor 
+
+## Semiotics
+
+- Communications
+- Cooperations
