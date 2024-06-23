@@ -10,6 +10,9 @@
 3. [[nginx - serve static websites\|nginx - serve static websites]]
 4. [[nginx - run php\|nginx - run php]]
 5. [[nginx - ssl-tls config\|nginx - ssl-tls config]]
+6. [[nginx - Layer 4 load balancing\|nginx - Layer 4 load balancing]]
+7. [[nginx conf for docker compose config\|nginx conf for docker compose config]]
+8. [[nginx - reverse proxy\|nginx - reverse proxy]]
 
 ## Check nginx config
 
@@ -18,7 +21,7 @@ nginx -t
 ```
 ## Installation
 
-### [[os/Linux/ubuntu\|ubuntu]]
+### [[os/Linux/Ubuntu\|Ubuntu]]
 
 ```bash
 sudo apt install nginx
