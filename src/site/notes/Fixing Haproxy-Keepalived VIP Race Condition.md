@@ -29,21 +29,21 @@ Create a dummy interface that always holds the VIP, ensuring HAProxy can start w
    On Debian-based systems, you can add the following to `/etc/network/interfaces`:
 
 ```c
-   auto dummy0
-   iface dummy0 inet static
-       address 172.22.21.36
-       netmask 255.255.255.0
-       pre-up ip link add dummy0 type dummy
-       post-down ip link del dummy0
+auto dummy0
+iface dummy0 inet static
+   address 172.22.21.36
+   netmask 255.255.255.0
+   pre-up ip link add dummy0 type dummy
+   post-down ip link del dummy0
 ```
 
    On Red Hat-based systems, create a file `/etc/sysconfig/network-scripts/ifcfg-dummy0` with:
 
 ```c
-   DEVICE=dummy0
-   IPADDR=172.22.21.36
-   NETMASK=255.255.255.0
-   ONBOOT=yes
+DEVICE=dummy0
+IPADDR=172.22.21.36
+NETMASK=255.255.255.0
+ONBOOT=yes
 ```
 
 And then enable the dummy interface:
