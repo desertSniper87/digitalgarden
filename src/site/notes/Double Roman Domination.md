@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/double-roman-domination/"}
 ---
 
-## Problem Definition
+k## Problem Definition
 
 (from beeler.2016) 
 
@@ -14,7 +14,7 @@ $f : V \rightarrow \{0, 1, 2, 3\}$
 
 having the property that 
 - if $f(v) = 0$, 
-	- then vertex $v$  must have at least **two neighbours assigned *2*** under $f$  or one neighbor with $f(w) = 3$,
+	- then vertex $v$  must have at least **two neighbours assigned *$f(w) = 2$*** under $f$  or **one neighbor with $f(w) = 3$,**
 - if $f(v) = 1$, 
 	- then vertex $v$ must have at least one neighbor with $f(w) \ge2$ .
 
