@@ -25,3 +25,7 @@ brew list
 
 Source: https://mkyong.com/mac/how-to-find-all-packages-installed-using-homebrew/
 
+
+## List of Homebrew packages
+
+- https://apple.stackexchange.com/questions/101090/list-of-all-packages-installed-using-homebrew
