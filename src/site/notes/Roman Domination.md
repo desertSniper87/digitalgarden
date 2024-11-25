@@ -79,6 +79,7 @@ Given a graph, a Roman Dominating Function is a function that labels the vertice
 - [greilhuber-schober-iurlano-raidl-23.pdf (tuwien.ac.at)](https://www.ac.tuwien.ac.at/files/pub/greilhuber-schober-iurlano-raidl-23.pdf) -  (See experimental eval (6))
 	- [Connected Papers](https://www.connectedpapers.com/main/9884d5726f0364545db85944fada435995fc798d/A-Simulated-Annealing-Based-Approach-for-the-Roman-Domination-Problem/graph)
 	- [people:raidl/](https://www.ac.tuwien.ac.at/people/raidl/)
+	- [[rdp - greihuber - greedy construction heuristics\|rdp - greihuber - greedy construction heuristics]]
 
 
 
@@ -121,3 +122,12 @@ The pseudocode uses a greedy approach to select dominating vertices based on the
 Cockayne et al. [4] introduce the term Roman domination
 
 such as the observation that the Roman domination number is at least the size of the domination number (i.e., the cardinality of the smallest dominating set) and at most twice this number for any graph.
+
+
+
+# Other PhD thesis regarding RDP in [[GRID graph\|GRID graph]]
+
+- [The Roman Domination Problem on Grid Graphs](http://archivia.unict.it/bitstream/10761/1560/1/NLSSVT80M16C351B-NolassiThesis.pdf)
+	- In Italian language
+	- Heuristic Algorithms for the Problem of Roman Domination
+	- References bipartite graphs, gainfactors

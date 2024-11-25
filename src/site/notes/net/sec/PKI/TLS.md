@@ -10,6 +10,11 @@
 
 At the heart of TLS is Public Key Infrastructure ([[net/sec/PKI\|PKI]]) and in particular [[net/sec/x509\|X.509]] certificates.
 
+## Definition
+
+- https://www.cloudflare.com/en-gb/learning/ssl/transport-layer-security-tls/
+
+![](https://cf-assets.www.cloudflare.com/slt3lc6tev37/3wZIhjRIjfVSmCbVqkBKzb/4a7aa34324108c725dc25fc9e7c4ea4a/tls-ssl-handshake.png )
 
 ## Links
 

@@ -22,7 +22,7 @@ keyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment
 subjectAltName = @alt_names
 
 [alt_names]
-DNS.1 = bcc-ca-website.org
+DNS.1 = mtls-demo.bcc-ca.gov.bd
 
 
 ```
@@ -38,7 +38,7 @@ openssl req \
   -x509 \
   -nodes \
   -newkey rsa:2048\
-  -days 365 \
+  -days 3650 \
   -subj '/CN=bcc' \
   -keyout ca.key \
   -out ca.crt
@@ -52,7 +52,7 @@ openssl req \
   -x509 \
   -nodes \
   -newkey rsa:2048\
-  -days 365 \
+  -days 3650 \
   -subj '/CN=bcc-client' \
   -keyout ca-client.key \
   -out ca-client.crt
@@ -75,7 +75,7 @@ Here common name is localhost
 openssl req \
   -new \
   -key server.key \
-  -subj '/CN=mtls.bcc-ca.gov.bd' \
+  -subj '/CN=mtls-demo.bcc-ca.gov.bd' \
   -out server.csr
 ```
 
@@ -88,7 +88,7 @@ openssl x509 \
   -CA ca.crt \
   -CAkey ca.key \
   -CAcreateserial \
-  -days 365 \
+  -days 3650 \
   -extfile v3.ext \
   -out server.crt
 ```
@@ -124,7 +124,7 @@ openssl x509 \
   -CA ca-client.crt \
   -CAkey ca-client.key \
   -CAcreateserial \
-  -days 365 \
+  -days 3650 \
   -out client.crt
 ```
 

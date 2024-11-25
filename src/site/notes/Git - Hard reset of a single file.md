@@ -7,5 +7,5 @@
 https://stackoverflow.com/questions/7147270/hard-reset-of-a-single-file
 
 ```bash
-git checkout HEAD -- my-file.txt
+git checkout HEAD -- $FILE
 ```

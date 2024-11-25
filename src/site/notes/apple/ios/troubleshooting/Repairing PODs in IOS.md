@@ -2,7 +2,7 @@
 {"dg-publish":true,"permalink":"/apple/ios/troubleshooting/repairing-po-ds-in-ios/"}
 ---
 
-
+1
 
 ```bash
 cd ios && pod deintegrate && pod install --repo-update --verbose && cd ..

@@ -32,6 +32,7 @@ By default the TLS protocol only proves the identity of the server to the client
 3. [X.509 Authentication in Spring Security | Baeldung](https://www.baeldung.com/x-509-authentication-in-spring-security)
 4. [TLS Setup in Spring | Baeldung](https://www.baeldung.com/spring-tls-setup)
 5. [Mutual TLS Authentication (mTLS) De-Mystified | by John Tucker | codeburst](https://codeburst.io/mutual-tls-authentication-mtls-de-mystified-11fa2a52e9cf) **Following**
+6. https://cloud.google.com/load-balancing/docs/mtls
 
 ## mTLS in browser
 
@@ -58,3 +59,20 @@ By default the TLS protocol only proves the identity of the server to the client
 ### mTLS in nGinx
 
 - [Client Certificate Authentication - NGINX Ingress Controller](https://kubernetes.github.io/ingress-nginx/examples/auth/client-certs/)
+
+## mTLS Security
+
+
+<div class="transclusion internal-embed is-loaded"><div class="markdown-embed">
+
+
+
+https://github.blog/security/vulnerability-research/mtls-when-certificate-authentication-is-done-wrong/
+
+</div></div>
+
+
+
+## mTLS - CA workflow
+
+![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*P5uKqeZ0A1hBylkqOSWrog.png)

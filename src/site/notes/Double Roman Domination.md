@@ -2,9 +2,9 @@
 {"dg-publish":true,"permalink":"/double-roman-domination/"}
 ---
 
-k## Problem Definition
+## Problem Definition
 
-(from beeler.2016) 
+(from [[Double Roman Domination#Resources\|beeler.2016]]) 
 
 For a graph $G = (V, E)$
 

@@ -15,6 +15,7 @@
 4. [[OpenSSL - Generate CSR for SSL Certificate\|OpenSSL - Generate CSR for SSL Certificate]]
 5. [[OpenSSL - get fingerprint from certificate\|OpenSSL - get fingerprint from certificate]]
 6. [[openssl - get certificate from URL\|openssl - get certificate from URL]]
+7. [[sre/Tools/openssl - Common Algorithms\|openssl - Common Algorithms]]
 
 
 ## Flags
@@ -111,7 +112,7 @@ openssl pkcs12 -in $PFX -clcerts -nokeys -out $CRT
 openssl x509 -inform DER -in subca_class_2.cer -out subca_class_2.crt
 ```
 
-## Installation in [[forums/ios\|forums/ios]]
+## Installation in [[forums/ios - forums\|ios - forums]]
 
 - [ios - Installing OpenSSL library for Xcode - Stack Overflow](https://stackoverflow.com/questions/22692564/installing-openssl-library-for-xcode)
 - [Easy inclusion of OpenSSL into iOS projects](https://atastypixel.com/easy-inclusion-of-openssl-into-iphone-app-projects/)
@@ -170,3 +171,11 @@ openssl x509 -inform der -in tls.cer -out tls.crt
 
 
 https://gist.github.com/singhabhinav/132b8196abac026b43fa
+
+
+
+## P12 to CER
+
+```bash
+openssl pkcs12 -in ca-client.p12 -clcerts -nokeys -out ca-client.cer
+```
