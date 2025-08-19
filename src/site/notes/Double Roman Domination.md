@@ -1,10 +1,14 @@
 ---
-{"dg-publish":true,"permalink":"/double-roman-domination/"}
+{"dg-publish":true,"permalink":"/double-roman-domination/","tags":["drdp"]}
 ---
 
+---
+- [[drdp - example graphs\|drdp - example graphs]]
+
+{ .block-language-dataview}
 ## Problem Definition
 
-(from [[Double Roman Domination#Resources\|beeler.2016]]) 
+(from [[#Resources|beeler.2016]]) 
 
 For a graph $G = (V, E)$
 
@@ -14,11 +18,11 @@ $f : V \rightarrow \{0, 1, 2, 3\}$
 
 having the property that 
 - if $f(v) = 0$, 
-	- then vertex $v$  must have at least **two neighbours assigned *$f(w) = 2$*** under $f$  or **one neighbor with $f(w) = 3$,**
+	- then vertex $v$ must have at least **two neighbours assigned *$f(w) = 2$*** under $f$ or **one neighbor with $f(w) = 3$,**
 - if $f(v) = 1$, 
 	- then vertex $v$ must have at least one neighbor with $f(w) \ge2$ .
 
-- The weight($w$) of a double Roman dominating function  is the sum $\sum_{v\epsilon_V}f(v)$, and the minimum weight of a double Roman dominating function on  is the double Roman domination number of .
+- The weight($w$) of a double Roman dominating function is the sum $\sum_{v\epsilon_V}f(v)$, and the minimum weight of a double Roman dominating function on is the double Roman domination number of .
 
 
 ## Solution
@@ -32,7 +36,7 @@ having the property that
 
 
 
-
+[F​​e​tc​h​in​​g ​T​​it​le​​](https://www.sciencedirect.com/science/article/pii/S1568494624000802)
 
 </div></div>
 
@@ -42,11 +46,12 @@ having the property that
 - [[Double Roman Domination - Ant Colony Optimization Solution\|Double Roman Domination - Ant Colony Optimization Solution]]
 ## [[Star Graph\|Star Graph]]: $K_{1, n-1}$
 
-![Double Roman Domination](https://www.researchgate.net/profile/Ana-Klobucar-Barisic/publication/346053100/figure/fig1/AS:962284222418944@1606437845398/Double-Roman-domination-on-star-graph.png)
+![Double Roman Domination|302x351](https://www.researchgate.net/profile/Ana-Klobucar-Barisic/publication/346053100/figure/fig1/AS:962284222418944@1606437845398/Double-Roman-domination-on-star-graph.png)
  
 $\gamma_{dR} (K_{1,n−1}) = 3$
 
-
+- 𝛾𝑑𝑅(𝐺) is the minimum weight of a DROMDF on 𝐺
+- 𝑉 (𝐺) represent the vertex set 
 
 ## Resources
 
@@ -62,3 +67,9 @@ TBD
 ## Github Repos
 
 - [maticdragan/sdrdp: This is a public repo containing instances and rough results on ILP models for solving Signed double Roman domination and Perfect double Roman domination problems (github.com)](https://github.com/maticdragan/sdrdp)
+
+![Double Roman Domination-1754424007701.webp](/img/user/Double%20Roman%20Domination-1754424007701.webp)
+
+
+- [[Heuristics vs Meta Heuristics\|Heuristics vs Meta Heuristics]]
+- [[Approximation Factor\|Approximation Factor]]

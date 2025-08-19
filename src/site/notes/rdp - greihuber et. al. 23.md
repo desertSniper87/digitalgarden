@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/rdp-greihuber-et-al-23/"}
+{"dg-publish":true,"permalink":"/rdp-greihuber-et-al-23/","tags":["gainfactor"]}
 ---
 
 

@@ -16,15 +16,29 @@
 5. [[OpenSSL - get fingerprint from certificate\|OpenSSL - get fingerprint from certificate]]
 6. [[openssl - get certificate from URL\|openssl - get certificate from URL]]
 7. [[sre/Tools/openssl - Common Algorithms\|openssl - Common Algorithms]]
+8. [[openssl - file encryption\|openssl - file encryption]]
 
 
 ## Flags
 
-| Flag            | Description                   |
-| --------------- | ----------------------------- |
-| `-new`, `-X509` | Generates self signed root CA |
-| `-subj`         | CA Identity                   |
-| `-des3`         | [Triple DES](https://en.wikipedia.org/wiki/Triple_DES)                              |
+
+<div class="transclusion internal-embed is-loaded"><div class="markdown-embed">
+
+
+
+
+| Flag            | Description                                            |
+| --------------- | ------------------------------------------------------ |
+| `-new`, `-X509` | Generates self signed root CA                          |
+| `-subj`         | CA Identity                                            |
+| `-des3`         | [Triple DES](https://en.wikipedia.org/wiki/Triple_DES) |
+| `-nocerts`      | Only Private key in output                             |
+| `-nodes`        | No [[Data Encryption Standard\|DES]]                   |
+| `-clcerts`      | get client certificates                                |
+| `-nokeys`       | only certificates in output                            |
+
+
+</div></div>
 
 ## Generation of [[net/sec/x509\|x509]] certificates
 

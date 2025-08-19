@@ -10,7 +10,7 @@
 ## Why Deep Learning
 
 - [Why Deep Learning over Traditional Machine Learning? | by Sambit Mahapatra | Towards Data Science](https://towardsdatascience.com/why-deep-learning-is-needed-over-traditional-machine-learning-1b6a99177063)
-> is that it’s powered by massive amounts of [[data\|data]]
+> is that it’s powered by massive amounts of [[Data\|data]]
 
 > **Deep Learning** techniques tend to solve the problem end to end
 

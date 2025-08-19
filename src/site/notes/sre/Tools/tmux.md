@@ -4,6 +4,7 @@
 
 ## Links
 
+- [[Tmux - Mouse Support\|Tmux - Mouse Support]]
 - [[Tmux - rename pane\|Tmux - rename pane]]
 - [[Tmux - rename session\|Tmux - rename session]]
 - [[Tmux Plugin Manager - TPM\|Tmux Plugin Manager - TPM]]

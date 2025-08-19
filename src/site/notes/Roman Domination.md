@@ -28,7 +28,7 @@ Given a graph, a Roman Dominating Function is a function that labels the vertice
 
 - https://www.sciencedirect.com/science/article/pii/S0012365X03004473
 - https://math.uchicago.edu/~may/REU2015/REUPapers/Xu,Linfeng.pdf
-- Original Problem - [Defendens Imperium Romanum: A Classical Problem in Military Strategy on JSTOR](https://www.jstor.org/stable/2589113)
+- Original Problem - [Defendens Imperium Romanum: A Classical Problem in Military Strategy on JSTOR](https://www.jstor.org/stable/2589113) #roman_domination/paper
 - [Upper bounds on Roman domination numbers of graphs - ScienceDirect](https://www.sciencedirect.com/science/article/pii/S0012365X11005899)
 - [080733085 (siam.org)](https://epubs.siam.org/doi/pdf/10.1137/080733085)
 - [On the k-Strong Roman Domination Problem - ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S0166218X20302675)
@@ -39,6 +39,7 @@ Given a graph, a Roman Dominating Function is a function that labels the vertice
 - [A novel approach to partial coverage in wireless sensor networks via the Roman dominating set](https://ietresearch.onlinelibrary.wiley.com/doi/full/10.1049/ntw2.12034)
 - [Solving the signed Roman domination and signed total Roman domination problems with exact and heuristic methods](https://arxiv.org/pdf/2201.00394) - ***[[Signed Roman Domination\|SRD]], [[Signed Roman Domination\|STRD]]***
 - [On Roman Domination of Graphs Using a Genetic Algorithm](https://link.springer.com/chapter/10.1007/978-981-15-6876-3_11)
+- [Roman domination in graphs](https://pdf.sciencedirectassets.com/271536/1-s2.0-S0012365X00X04487/1-s2.0-S0012365X03004473/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEG0aCXVzLWVhc3QtMSJIMEYCIQCCypmjwc2lsDvsdubU4PYCmb7tSi0BwH98Re3DvCpy2gIhALPjkcY%2Bv51BxgSMZ%2F7TDT0su%2BeB1o%2B4eEyoWK69wpgIKrwFCKb%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQBRoMMDU5MDAzNTQ2ODY1Igyh2xFPaCcr808HuBgqkAXvBUQXbulYZk6jK3ICFz%2Ba5Ty0vmMIdoX8eRmi6frcbbJHvbR9UhD7AuBQqwGFYpLAoAUm3N%2FYQegXPOTh9X0ZYsRXHCELwvU%2Fbe%2FhJKTx0u8H7oAszBV868p7MXzm5PRThIN3g23ssF%2Fokw6fr%2BwlhgB%2FU3f%2FZgp4uDA0KpZ%2BbzepU8xUY6Z6ZDwNHWJPIf7lBfO3y1eZGpo5UQYvgyEPcQph9PrFutheb2eeHI8LnzIL2jpMRjNlcSCgS4tZ6nN5JdlFJT2iVFD%2F0%2FxNJShP4oa8WNaT9VXGfvHtfWiG6q3gT%2F8ZxExihp%2Fb3jwogzNLFfLuSIWNi6oAFlS5EOPboz9qygIHRBkTesDLMj13YrGUi92cfbaBbZ%2BSRQCm9B0lCkxIEqDIllSxSUaRFeTigO7%2BSqghB1bbj%2Fv3l4AGjZW6fzcCE2RoJGlQ017ebbFp%2FQtH9EHHysYTzseX1H1eHVVf1sI4LUcN2Xsc6PBBoQSCA7%2FkbJgYu2EcI19qYSGjXX%2Fl7LpD9Q2pEuhDAw46o%2BpwQScPprBvFgYR2QGSshrhe3J5QdgVfkA35z%2FabGUE4TO6xojM4wcAv6zSiw29TDN%2FyiZPHiJ1J0YpnliOSgtLU%2Bw5KFA3Ir7CAod3hVHKkJkHEAxLJVZrbpCsThBZ4t0UhLT0RUiFo6KRaAOlYhIkzKSyiy7u2CythP4N%2BlPX4fsS5NSWqozSKZH1z6vyHIax1lkRAGF1T4B%2BYo6xNtyHCkwDzfAiJToMmbJhBnYH7j%2FML4VgIRjUip%2FoyZHMv2eBQfxqZukeNhHpF6cJVCfQovBQoJF0AgD7qJbTE6mKh9A0d5zFKPglc4VBljaan9r1NOQAv0fuXaZeDmtiyTDWgYy%2BBjqwAT6Oiokp8ClEHzdkKY4woAQXWkjTLIQt%2B%2FkV3CWeykDi7UNphK4R0ZIKrozrVJtY2AaceF1up5bGDzQ9P%2BQ0PNypRpvvEe9zxzzEMdPrUbH0Vr5K1KyDmGrGFOybN8kaYvYBFRFIC1tht%2BmaCYzJB5pz2pBwDtHWZh948%2Fl0l60k2J4owm6AoHdxLwJoS%2BbjAOyN3AEfan%2FfXvFt0TSVUuUIBimwXOZisUW1DvUyhAkG&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20250301T132038Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3PHCVTYTUH7GERR%2F20250301%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=b693b4b4aebcaa1843111055316edae5d46a28df6c2ebfdfd7985495ce9f4826&hash=d041ff69951c51b5dbc35668ffa06e62df94e57b6830d276207e5cc70cc4d7df&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S0012365X03004473&tid=spdf-e58dc49d-7c81-42ba-b9bd-d5ea8fa944b5&sid=4d6a42f44a95c4417f9a13c-6718ce917499gxrqb&type=client&tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&rh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&ua=180256535e5c015d070b50&rr=9198f3ee2e7dba53&cc=bd)
 
 ### PhD Thesis
 
@@ -59,8 +60,11 @@ Given a graph, a Roman Dominating Function is a function that labels the vertice
  -  [[Gilbert random graphs\|Gilbert random graphs]]
  -  [[Barabási-Albert random graphs\|Barabási-Albert random graphs]]
  -  [[bipartite graphs\|bipartite graphs]]
+	 - [Chakradhar et. al 2022](https://www.rairo-ro.org/articles/ro/pdf/2022/04/ro200164.pdf?utm_source=chatgpt.com) - star convex bipartite graphs and comb convex bipartite graphs
  -  [[planar graphs\|planar graphs]]
+	 - [Chakradhar et. al 2022](https://www.rairo-ro.org/articles/ro/pdf/2022/04/ro200164.pdf?utm_source=chatgpt.com)
  -  [[grid graphs\|grid graphs]]
+	 - [[curro et al. 2014\|curro et al. 2014]]
 
 ##### [[Graph Data\|Graph Data]]
 
@@ -116,7 +120,7 @@ The pseudocode uses a greedy approach to select dominating vertices based on the
 
 - [roman-domination/qtrd_v2.py at master · Itasuka/roman-domination (github.com)](https://github.com/Itasuka/roman-domination/blob/master/qtrd_v2.py)
 - [Louisliuzy/k-Strong_Roman_Domination (github.com)](https://github.com/Louisliuzy/k-Strong_Roman_Domination)
-- [XDnl/CUDARomanGraph: Roman domination graphs implementation in CUDA (github.com)](https://github.com/XDnl/CUDARomanGraph) - Most probably [[Roman Domination#Nolassi et al 2013\|#Nolassi et al 2013]]
+- [XDnl/CUDARomanGraph: Roman domination graphs implementation in CUDA (github.com)](https://github.com/XDnl/CUDARomanGraph) - Most probably [[#Nolassi et al 2013]]
 - [gurjaranchal/Roman-Domination-Problem-Using-PSO (github.com)](https://github.com/gurjaranchal/Roman-Domination-Problem-Using-PSO)
 
 Cockayne et al. [4] introduce the term Roman domination

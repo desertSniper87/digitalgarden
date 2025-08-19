@@ -3,7 +3,7 @@
 ---
 
 
-1. A [[db/database\|database]] that automatically scales, rebalances, and repairs itself.
+1. A [[db/Database\|Database]] that automatically scales, rebalances, and repairs itself.
 
 ## Links
 1. [[db/Distributed Database/SQL/CockroachDB/CockroachDB production Deployment\|CockroachDB production Deployment]]
