@@ -297,7 +297,9 @@ This is a chapter-wise index for Certified Ethical Hacker topics, linking to not
 - [[Cloud/Cloud Computing\|Cloud/Cloud Computing]]
 
 ## 19. Cryptography
+- [[Cryptographic Algorithms\|Cryptographic Algorithms]]
 - [[Symmetric Encryption\|Symmetric Encryption]]
+- [[Asymmetric Encryption\|Asymmetric Encryption]]
 - [[Data Encryption Standard\|Data Encryption Standard]]
 - [[net/sec/PKI/TLS\|net/sec/PKI/TLS]]
 - [[net/sec/PKI/TLS/Self-Signed Certificate\|net/sec/PKI/TLS/Self-Signed Certificate]]
