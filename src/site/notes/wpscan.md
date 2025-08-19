@@ -5,6 +5,8 @@
 
 [WPScan](https://github.com/wpscanteam/wpscan) is an automated [[WordPress\|WordPress]] scanner and enumeration tool
 
+- [[wpscan token\|wpscan token]]
+
 ```bash
 wpscan -u james -P /password.txt — url http://172.16.0.27:8080/CEH/
 ```
@@ -14,14 +16,10 @@ wpscan --url 172.28.128.4/wordpress --wp-content-dir /wp-admin -e
 
 ```
 ```
-wpscan --enumerate --url http://179.61.189.204 --api-token kGrndcbVUXVNPpHWoo8b8AnksQMMe2QN7vfxjMyZF7I
+wpscan --enumerate --url http://179.61.189.204 --api-token ABCD
 ```
 
-## Token
 
-```
-kGrndcbVUXVNPpHWoo8b8AnksQMMe2QN7vfxjMyZF7I
-```
 
 ## Enumerate
 

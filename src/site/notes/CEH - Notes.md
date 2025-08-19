@@ -301,7 +301,6 @@ This is a chapter-wise index for Certified Ethical Hacker topics, linking to not
 - [[Data Encryption Standard\|Data Encryption Standard]]
 - [[net/sec/PKI/TLS\|net/sec/PKI/TLS]]
 - [[net/sec/PKI/TLS/Self-Signed Certificate\|net/sec/PKI/TLS/Self-Signed Certificate]]
-- [[X-Road - Encryption\|X-Road - Encryption]]
 - [[Internet Protocol Security\|Internet Protocol Security]]
 - [[john - Hash Format\|john - Hash Format]]
 - [[keytool\|keytool]]
