@@ -3,7 +3,6 @@
 ---
 
 
-# CEH - Notes (Chapter-wise Index)
 
 This is a chapter-wise index for Certified Ethical Hacker topics, linking to notes in this vault.
 
