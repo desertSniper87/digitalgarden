@@ -11,3 +11,4 @@
 
 ```bash
 perl fierce.pl -dns <domain_name>
+```
