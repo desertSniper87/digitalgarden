@@ -4,7 +4,7 @@
 
 ## Privilege Escalation Using DLL Hijacking
 
-- Most Windows applications do not use the fully qualified path when loading an external DLL library
+- Most Windows applications do not use the **fully qualified path** when loading an external DLL library
   - They first search the directory from which they have been loaded
   - If attackers can place a malicious DLL in the application directory
     - The application will execute the malicious DLL in place of the real DLL
