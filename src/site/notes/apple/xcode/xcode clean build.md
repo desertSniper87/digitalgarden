@@ -22,5 +22,5 @@ rm -rf ~/Library/Developer
 rm -rf ~/Library/Developer/Caches/com.apple.dt.Xcode
 rm -rf ~/Library/Developer/Saved Application State/com.apple.dt.Xcode.savedState
 # rm -rf ~/Dev/ekyc-native-app/ios/QuickPass.xcodeproj/project.xcworkspace/xcuserdata
-rm -rf ~/dev/gosign_flutter_app/ios/Runner.xcodeproj/project.xcworkspace/xcuserdata
+rm -rf ~/dev/pointypass/ios/Runner.xcodeproj/project.xcworkspace/xcuserdata
 ```
